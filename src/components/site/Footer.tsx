@@ -1,22 +1,15 @@
 import { Link } from "@tanstack/react-router";
-import { Droplets, Phone, Mail, MapPin, Clock, MessageCircle, Instagram, Facebook, Linkedin } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, MessageCircle, Instagram, Facebook, Linkedin } from "lucide-react";
+import logo from "@/assets/aquatru-logo.png.asset.json";
 
 export function Footer() {
   return (
     <footer className="border-t border-input bg-deep">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
         <div>
-          <div className="flex items-center gap-2">
-            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-primary-foreground">
-              <Droplets className="h-5 w-5" />
-            </span>
-            <span className="font-display text-lg font-extrabold tracking-wide">
-              Aqua<span className="text-primary">Pure</span>
-              <span className="ml-1 text-xs font-medium text-muted-foreground">UAE</span>
-            </span>
-          </div>
+          <img src={logo.url} alt="MENA AQUA Tru" loading="lazy" className="h-9 w-auto brightness-125 contrast-125" />
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-            Premium water purification for UAE homes and businesses — engineered, installed and
+            Whole house water solutions for UAE homes and businesses — engineered, installed and
             maintained by certified specialists since 2012.
           </p>
           <div className="mt-5 flex gap-3">
