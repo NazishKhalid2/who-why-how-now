@@ -110,9 +110,10 @@ function HomePage() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-underwater pt-16">
-        <div className="pointer-events-none absolute -top-24 right-0 h-[28rem] w-[28rem] rounded-full bg-primary/15 blur-3xl animate-drift" />
-        <div className="pointer-events-none absolute bottom-0 left-0 h-[22rem] w-[22rem] rounded-full bg-deep-2/60 blur-3xl animate-drift-slow" />
-        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 pb-24 pt-16 sm:px-6 lg:grid-cols-2 lg:px-8 lg:pt-24">
+        <div className="pointer-events-none absolute -top-24 right-0 h-[28rem] w-[28rem] rounded-full bg-primary/10 blur-3xl animate-drift" />
+        <div className="pointer-events-none absolute bottom-0 left-0 h-[22rem] w-[22rem] rounded-full bg-deep-2/70 blur-3xl animate-drift-slow" />
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 pb-20 pt-14 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:pb-24 lg:pt-20">
+
           <Reveal>
             <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary">
               Water Purification · UAE
