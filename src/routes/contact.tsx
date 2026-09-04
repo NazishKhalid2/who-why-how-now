@@ -22,7 +22,7 @@ export const Route = createFileRoute("/contact")({
 });
 
 const inputCls =
-  "w-full rounded-xl border border-input bg-background/40 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/30";
+  "w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/30";
 
 function ContactPage() {
   const [sent, setSent] = useState(false);
@@ -94,7 +94,7 @@ function ContactPage() {
                   </label>
                   <button
                     type="submit"
-                    className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_30px_oklch(0.82_0.125_205/50%)]"
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_30px_oklch(0.6_0.115_218/40%)]"
                   >
                     <Send className="h-4 w-4" /> Send Message
                   </button>

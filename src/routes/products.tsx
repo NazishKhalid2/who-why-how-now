@@ -66,7 +66,7 @@ function ProductsPage() {
 
         <div className="mx-auto mt-12 grid max-w-7xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {visible.map((p, i) => (
-            <Reveal key={p.id} delay={(i % 3) * 90}>
+            <Reveal key={p.id} delay={(i % 3) * 90} className="h-full">
               <Link
                 to="/products/$productId"
                 params={{ productId: p.id }}

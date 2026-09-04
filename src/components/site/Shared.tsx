@@ -9,7 +9,7 @@ export function WhatsAppFloat() {
       target="_blank"
       rel="noreferrer"
       aria-label="Chat on WhatsApp"
-      className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-[0_8px_30px_oklch(0.82_0.125_205/40%)] transition-transform hover:scale-110"
+      className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-[0_10px_30px_-8px_oklch(0.6_0.115_218/50%)] transition-transform hover:scale-110"
     >
       <MessageCircle className="h-6 w-6" />
     </a>
@@ -80,7 +80,7 @@ export function CTABanner() {
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <a
             href="/book"
-            className="rounded-full bg-primary px-8 py-3.5 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_30px_oklch(0.82_0.125_205/50%)]"
+            className="rounded-full bg-primary px-8 py-3.5 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_30px_oklch(0.6_0.115_218/40%)]"
           >
             Book a Free Consultation
           </a>

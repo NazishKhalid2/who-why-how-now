@@ -15,7 +15,7 @@ import {
   Headset,
 } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
-import { SectionHeading, CTABanner, WaveDivider } from "@/components/site/Shared";
+import { SectionHeading, CTABanner } from "@/components/site/Shared";
 import { images, testimonials } from "@/data/site";
 
 export const Route = createFileRoute("/")({
@@ -110,9 +110,10 @@ function HomePage() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-underwater pt-16">
-        <div className="pointer-events-none absolute -top-24 right-0 h-[28rem] w-[28rem] rounded-full bg-primary/15 blur-3xl animate-drift" />
-        <div className="pointer-events-none absolute bottom-0 left-0 h-[22rem] w-[22rem] rounded-full bg-deep-2/60 blur-3xl animate-drift-slow" />
-        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 pb-24 pt-16 sm:px-6 lg:grid-cols-2 lg:px-8 lg:pt-24">
+        <div className="pointer-events-none absolute -top-24 right-0 h-[28rem] w-[28rem] rounded-full bg-primary/10 blur-3xl animate-drift" />
+        <div className="pointer-events-none absolute bottom-0 left-0 h-[22rem] w-[22rem] rounded-full bg-deep-2/70 blur-3xl animate-drift-slow" />
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 pb-20 pt-14 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:pb-24 lg:pt-20">
+
           <Reveal>
             <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary">
               Water Purification · UAE
@@ -128,7 +129,7 @@ function HomePage() {
             <div className="mt-9 flex flex-wrap gap-4">
               <Link
                 to="/book"
-                className="rounded-full bg-primary px-8 py-4 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_30px_oklch(0.82_0.125_205/50%)]"
+                className="rounded-full bg-primary px-8 py-4 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_30px_oklch(0.6_0.115_218/40%)]"
               >
                 Book a Free Consultation
               </Link>
@@ -152,12 +153,12 @@ function HomePage() {
             </div>
           </Reveal>
         </div>
-        <WaveDivider className="text-background" />
       </section>
 
       {/* Trust bar */}
-      <section className="border-b border-input px-4 py-8 sm:px-6 lg:px-8">
-        <Reveal className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-10 gap-y-5">
+      <section className="border-y border-input bg-background px-4 py-7 sm:px-6 lg:px-8">
+        <Reveal className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-10 gap-y-4">
+
           {trustItems.map((t) => (
             <div key={t.label} className="flex items-center gap-2.5 text-sm font-semibold text-muted-foreground">
               <t.icon className="h-5 w-5 text-primary" />
@@ -223,7 +224,7 @@ function HomePage() {
         />
         <div className="mx-auto mt-14 grid max-w-7xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {categories.map((c, i) => (
-            <Reveal key={c.title} delay={i * 90}>
+            <Reveal key={c.title} delay={i * 90} className="h-full">
               <Link
                 to={c.to}
                 className="glass glow-hover group flex h-full flex-col rounded-3xl p-7"
@@ -252,7 +253,7 @@ function HomePage() {
         />
         <div className="mx-auto mt-14 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((s, i) => (
-            <Reveal key={s.title} delay={i * 100}>
+            <Reveal key={s.title} delay={i * 100} className="h-full">
               <div className="glass relative h-full rounded-3xl p-7">
                 <span className="absolute right-6 top-5 font-display text-4xl font-extrabold text-primary/20">
                   {String(i + 1).padStart(2, "0")}
@@ -276,7 +277,7 @@ function HomePage() {
         />
         <div className="mx-auto mt-14 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((f, i) => (
-            <Reveal key={f.title} delay={i * 90}>
+            <Reveal key={f.title} delay={i * 90} className="h-full">
               <div className="glass glow-hover h-full rounded-3xl p-7 text-center">
                 <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/15 text-primary">
                   <f.icon className="h-6 w-6" />
@@ -298,7 +299,7 @@ function HomePage() {
         />
         <div className="mx-auto mt-14 grid max-w-7xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {testimonials.map((t, i) => (
-            <Reveal key={t.name} delay={i * 90}>
+            <Reveal key={t.name} delay={i * 90} className="h-full">
               <figure className="glass flex h-full flex-col rounded-3xl p-7">
                 <div className="flex gap-1 text-primary">
                   {Array.from({ length: t.rating }).map((_, s) => (

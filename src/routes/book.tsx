@@ -22,7 +22,7 @@ export const Route = createFileRoute("/book")({
 });
 
 const inputCls =
-  "w-full rounded-xl border border-input bg-background/40 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/30";
+  "w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/30";
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
@@ -112,18 +112,17 @@ function BookPage() {
                     ))}
                   </select>
                 </Field>
-                <div className="grid grid-cols-2 gap-4">
-                  <Field label="Preferred Date *">
-                    <input name="date" type="date" className={inputCls} />
-                  </Field>
-                  <Field label="Preferred Time">
-                    <select name="time" className={inputCls} defaultValue="Morning (8–12)">
-                      {["Morning (8–12)", "Afternoon (12–4)", "Evening (4–8)"].map((o) => (
-                        <option key={o}>{o}</option>
-                      ))}
-                    </select>
-                  </Field>
-                </div>
+                <Field label="Preferred Date *">
+                  <input name="date" type="date" className={inputCls} />
+                </Field>
+                <Field label="Preferred Time">
+                  <select name="time" className={inputCls} defaultValue="Morning (8–12)">
+                    {["Morning (8–12)", "Afternoon (12–4)", "Evening (4–8)"].map((o) => (
+                      <option key={o}>{o}</option>
+                    ))}
+                  </select>
+                </Field>
+
                 {errors["date"] && <p className="-mt-3 text-xs font-medium text-destructive sm:col-span-2">{errors["date"]}</p>}
                 <div className="sm:col-span-2">
                   <Field label="Notes">
@@ -132,7 +131,7 @@ function BookPage() {
                 </div>
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_30px_oklch(0.82_0.125_205/50%)] sm:col-span-2"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_30px_oklch(0.6_0.115_218/40%)] sm:col-span-2"
                 >
                   <CalendarCheck className="h-4 w-4" /> Confirm Booking Request
                 </button>

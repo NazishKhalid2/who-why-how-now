@@ -68,7 +68,7 @@ export function Navbar() {
           </button>
           <Link
             to="/book"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_24px_oklch(0.82_0.125_205/45%)]"
+            className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_24px_oklch(0.6_0.115_218/35%)]"
           >
             <CalendarCheck className="h-4 w-4" />
             Book Appointment
