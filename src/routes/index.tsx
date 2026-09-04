@@ -224,7 +224,7 @@ function HomePage() {
         />
         <div className="mx-auto mt-14 grid max-w-7xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {categories.map((c, i) => (
-            <Reveal key={c.title} delay={i * 90}>
+            <Reveal key={c.title} delay={i * 90} className="h-full">
               <Link
                 to={c.to}
                 className="glass glow-hover group flex h-full flex-col rounded-3xl p-7"
@@ -253,7 +253,7 @@ function HomePage() {
         />
         <div className="mx-auto mt-14 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((s, i) => (
-            <Reveal key={s.title} delay={i * 100}>
+            <Reveal key={s.title} delay={i * 100} className="h-full">
               <div className="glass relative h-full rounded-3xl p-7">
                 <span className="absolute right-6 top-5 font-display text-4xl font-extrabold text-primary/20">
                   {String(i + 1).padStart(2, "0")}
@@ -277,7 +277,7 @@ function HomePage() {
         />
         <div className="mx-auto mt-14 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((f, i) => (
-            <Reveal key={f.title} delay={i * 90}>
+            <Reveal key={f.title} delay={i * 90} className="h-full">
               <div className="glass glow-hover h-full rounded-3xl p-7 text-center">
                 <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/15 text-primary">
                   <f.icon className="h-6 w-6" />
@@ -299,7 +299,7 @@ function HomePage() {
         />
         <div className="mx-auto mt-14 grid max-w-7xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {testimonials.map((t, i) => (
-            <Reveal key={t.name} delay={i * 90}>
+            <Reveal key={t.name} delay={i * 90} className="h-full">
               <figure className="glass flex h-full flex-col rounded-3xl p-7">
                 <div className="flex gap-1 text-primary">
                   {Array.from({ length: t.rating }).map((_, s) => (
