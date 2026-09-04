@@ -15,7 +15,7 @@ import {
   Headset,
 } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
-import { SectionHeading, CTABanner, WaveDivider } from "@/components/site/Shared";
+import { SectionHeading, CTABanner } from "@/components/site/Shared";
 import { images, testimonials } from "@/data/site";
 
 export const Route = createFileRoute("/")({
