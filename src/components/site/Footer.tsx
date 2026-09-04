@@ -71,11 +71,11 @@ export function Footer() {
           <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
             <li className="flex items-start gap-3">
               <Clock className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-              Sat – Thu: 8:00 AM – 8:00 PM
+              Open 7 days a week
             </li>
             <li className="flex items-start gap-3">
               <Clock className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-              Friday: 2:00 PM – 8:00 PM
+              8:00 AM – 9:00 PM
             </li>
             <li className="rounded-xl border border-input bg-secondary/40 p-3 text-xs leading-relaxed">
               Emergency support line answered 24/7 for AMC and commercial clients.

@@ -108,7 +108,7 @@ function ContactPage() {
               <div className="glass overflow-hidden rounded-3xl">
                 <iframe
                   title="MENA AQUA Tru location — Al Muteena, Deira, Dubai"
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=55.205%2C25.12%2C55.26%2C25.165&layer=mapnik&marker=25.1425%2C55.2325"
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=55.31%2C25.26%2C55.34%2C25.28&layer=mapnik&marker=25.27%2C55.325"
                   className="h-64 w-full border-0"
                   loading="lazy"
                 />
@@ -119,8 +119,7 @@ function ContactPage() {
                   { icon: MessageCircle, label: "WhatsApp", value: "050-7183290" },
                   { icon: Mail, label: "Email", value: "sales.aquatru@gmail.com" },
                   { icon: MapPin, label: "Address", value: "Al Muteena, Deira, Dubai" },
-                  { icon: Clock, label: "Sat – Thu", value: "8:00 AM – 8:00 PM" },
-                  { icon: Clock, label: "Friday", value: "2:00 PM – 8:00 PM" },
+                  { icon: Clock, label: "Open 7 days", value: "8:00 AM – 9:00 PM" },
                 ].map((c) => (
                   <div key={c.label} className="flex items-start gap-3">
                     <c.icon className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
