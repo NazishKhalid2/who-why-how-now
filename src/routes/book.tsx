@@ -78,7 +78,7 @@ function BookPage() {
                 <h2 className="mt-6 text-2xl font-bold">Request received</h2>
                 <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">
                   Thank you — our team will call you within one working hour to confirm your
-                  appointment. Prefer instant confirmation? Message us on WhatsApp at +971 50 555 0123.
+                  appointment. Prefer instant confirmation? Message us on WhatsApp at 050-7183290.
                 </p>
               </div>
             ) : (

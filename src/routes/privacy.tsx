@@ -33,11 +33,11 @@ const sections = [
   },
   {
     title: "Your rights",
-    body: "You may request a copy, correction or deletion of your personal data at any time by emailing care@menaaquatru.ae. We respond to all requests within 7 working days.",
+    body: "You may request a copy, correction or deletion of your personal data at any time by emailing sales.aquatru@gmail.com. We respond to all requests within 7 working days.",
   },
   {
     title: "Contact",
-    body: "Questions about this policy: MENA AQUA Tru Water Solutions LLC, Warehouse 12, Al Quoz 3, Dubai, UAE · care@menaaquatru.ae · +971 4 555 0123.",
+    body: "Questions about this policy: MENA AQUA Tru Water Solutions LLC, Al Muteena, Deira, Dubai, United Arab Emirates · sales.aquatru@gmail.com · 050-7183290.",
   },
 ];
 

@@ -51,17 +51,17 @@ export function Footer() {
           <h3 className="text-sm font-bold uppercase tracking-widest text-foreground">Contact</h3>
           <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
             <li className="flex items-start gap-3">
-              <Phone className="mt-0.5 h-4 w-4 shrink-0 text-primary" /> +971 4 555 0123
+              <Phone className="mt-0.5 h-4 w-4 shrink-0 text-primary" /> 050-7183290
             </li>
             <li className="flex items-start gap-3">
-              <MessageCircle className="mt-0.5 h-4 w-4 shrink-0 text-primary" /> +971 50 555 0123 (WhatsApp)
+              <MessageCircle className="mt-0.5 h-4 w-4 shrink-0 text-primary" /> 050-7183290 (WhatsApp)
             </li>
             <li className="flex items-start gap-3">
-              <Mail className="mt-0.5 h-4 w-4 shrink-0 text-primary" /> care@menaaquatru.ae
+              <Mail className="mt-0.5 h-4 w-4 shrink-0 text-primary" /> sales.aquatru@gmail.com
             </li>
             <li className="flex items-start gap-3">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-              Warehouse 12, Al Quoz 3, Dubai, UAE
+              Al Muteena, Deira, Dubai, United Arab Emirates
             </li>
           </ul>
         </div>
@@ -71,11 +71,11 @@ export function Footer() {
           <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
             <li className="flex items-start gap-3">
               <Clock className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-              Sat – Thu: 8:00 AM – 8:00 PM
+              Open 7 days a week
             </li>
             <li className="flex items-start gap-3">
               <Clock className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-              Friday: 2:00 PM – 8:00 PM
+              8:00 AM – 9:00 PM
             </li>
             <li className="rounded-xl border border-input bg-secondary/40 p-3 text-xs leading-relaxed">
               Emergency support line answered 24/7 for AMC and commercial clients.

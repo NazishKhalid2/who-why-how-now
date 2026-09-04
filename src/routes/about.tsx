@@ -65,7 +65,7 @@ function AboutPage() {
             <h2 className="font-display text-3xl font-extrabold tracking-tight">Our story</h2>
             <p className="mt-5 leading-relaxed text-muted-foreground">
               What started as a two-person installation team is today a full-service water company:
-              in-house engineers, a genuine spare-parts warehouse in Al Quoz, and maintenance fleets
+              in-house engineers, a genuine spare-parts warehouse in Al Muteena, Deira, and maintenance fleets
               covering every emirate. Over 500 installations later, our approach hasn't changed —
               test first, recommend honestly, and stand behind every system for life.
             </p>

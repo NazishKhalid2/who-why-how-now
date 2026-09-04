@@ -43,7 +43,7 @@ const services = [
   {
     icon: Hammer,
     title: "Repairs & Upgrades",
-    desc: "Leaks, low pressure, strange taste — we repair all major brands, not just our own. Genuine parts from our Al Quoz warehouse, fitted by specialists.",
+    desc: "Leaks, low pressure, strange taste — we repair all major brands, not just our own. Genuine parts from our Al Muteena warehouse, fitted by specialists.",
     points: ["All brands serviced", "Genuine spare parts", "Same-day dispatch in Dubai & Sharjah"],
   },
 ];

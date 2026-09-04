@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 export function WhatsAppFloat() {
   return (
     <a
-      href="https://wa.me/971505550123"
+      href="https://wa.me/971507183290"
       target="_blank"
       rel="noreferrer"
       aria-label="Chat on WhatsApp"
@@ -85,7 +85,7 @@ export function CTABanner() {
             Book a Free Consultation
           </a>
           <a
-            href="https://wa.me/971505550123"
+            href="https://wa.me/971507183290"
             target="_blank"
             rel="noreferrer"
             className="glass rounded-full px-8 py-3.5 text-sm font-bold text-foreground transition-all hover:border-primary"

@@ -1,4 +1,4 @@
-import lineupAsset from "@/assets/aquatru-lineup.jpg.asset.json";
+import lineupAsset from "@/assets/aquatru-lineup-2.png.asset.json";
 import residentialImg from "@/assets/product-residential.jpg";
 import commercialImg from "@/assets/product-commercial.jpg";
 import partsImg from "@/assets/product-parts.jpg";
