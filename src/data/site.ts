@@ -1,4 +1,7 @@
 import lineupAsset from "@/assets/aquatru-lineup-2.png.asset.json";
+import whatsInWaterAsset from "@/assets/whats-in-your-water.jpg.asset.json";
+import whatsLurkingAsset from "@/assets/whats-lurking.jpg.asset.json";
+import contaminantsAsset from "@/assets/contaminants.jpg.asset.json";
 import residentialImg from "@/assets/product-residential.jpg";
 import commercialImg from "@/assets/product-commercial.jpg";
 import partsImg from "@/assets/product-parts.jpg";
@@ -211,6 +214,48 @@ export const faqs = [
 ];
 
 export const posts = [
+  {
+    slug: "whats-in-your-water",
+    title: "What's In Your Water? The Hidden Minerals You Drink Every Day",
+    excerpt:
+      "Discover the hidden minerals in your water and how they affect your health every day — from harmless calcium to the compounds you'd rather filter out.",
+    date: "2026-09-02",
+    author: "Eng. Omar Khalid",
+    image: whatsInWaterAsset.url,
+    body: [
+      "Every glass of water you drink carries more than H2O. Dissolved minerals, salts, treatment by-products and traces of whatever your building's pipework contributes all travel with it. Some of that is good for you: calcium and magnesium give water its clean, rounded taste and contribute to daily mineral intake.",
+      "Other passengers are less welcome. Chlorine and its by-products, added to keep municipal water microbiologically safe, affect taste and odour. Sediment picked up in older pipes and rooftop tanks carries a metallic edge. And in hard-water areas the same minerals that taste pleasant leave scale on kettles, glassware and water heaters.",
+      "The point isn't to fear your water — it's to know it. A two-minute on-site test tells you your TDS, hardness and chlorine levels, and from there the right system is an easy, evidence-based decision. Book a free water test and we'll show you exactly what's in your glass.",
+    ],
+  },
+  {
+    slug: "whats-lurking-in-your-water",
+    title: "What's Lurking In Your Water: Physical, Chemical & Biological Contaminants",
+    excerpt:
+      "Chlorine, lead, fluoride, pesticides, arsenic, sediment, nitrates and mercury — the eight contaminant groups every UAE household should understand.",
+    date: "2026-08-28",
+    author: "Aisha Rahman",
+    image: whatsLurkingAsset.url,
+    body: [
+      "Water contamination falls into three families. Physical contaminants are the ones you can often see or feel: sediment, rust particles and cloudiness from tank build-up. Chemical contaminants — chlorine, fluoride, nitrates, pesticides — are invisible and only show up in testing. Biological contaminants are living organisms: bacteria, viruses and parasites that thrive in warm, stagnant storage.",
+      "Heavy metals deserve their own mention. Lead, mercury and arsenic can leach from ageing plumbing and fittings, and they accumulate in the body over time rather than passing through. Nitrates matter most for infants and pregnant women. None of these change the taste of your water, which is precisely why they go unnoticed.",
+      "A properly specified reverse osmosis system removes up to 99% of dissolved solids, including the heavy metals and chemical residues on this list, while UV sterilization handles the biological side. Protect your family today — start with a free test so the system you buy matches the contaminants you actually have.",
+    ],
+  },
+  {
+    slug: "biological-and-heavy-metal-contaminants",
+    title: "Biological & Heavy Metal Contaminants: Is Your Water Truly Safe?",
+    excerpt:
+      "Bacteria, viruses and parasites on one side; lead, mercury, cadmium, chromium-6 and copper on the other. Here's what each one does and how to stop it.",
+    date: "2026-08-24",
+    author: "Eng. Omar Khalid",
+    image: contaminantsAsset.url,
+    body: [
+      "On the biological side, three groups matter. Bacteria such as E. coli, Salmonella and Legionella can multiply in warm storage tanks. Viruses including Norovirus, Hepatitis A and Rotavirus survive in water and require very low doses to cause illness. Parasites like Giardia and Cryptosporidium are chlorine-resistant, which makes physical and UV barriers essential.",
+      "Heavy metals are the slower threat. Lead damages the brain and kidneys. Mercury harms the nervous system. Cadmium is linked to kidney disease. Chromium-6 is a known carcinogen. Copper, in excess, causes liver damage. All five can enter drinking water through corroding pipework, fittings and solder rather than at the treatment plant.",
+      "The good news: a multi-stage RO system with a UV chamber addresses both families at once — the membrane rejects dissolved metals, and UV neutralizes anything living that reaches it. Ask us for an on-site assessment and we'll tell you honestly whether you need one, both, or neither.",
+    ],
+  },
   {
     slug: "uae-water-tds-explained",
     title: "What TDS Really Means for Your Family's Water in the UAE",
