@@ -1,4 +1,7 @@
 import lineupAsset from "@/assets/aquatru-lineup-2.png.asset.json";
+import whatsInWaterAsset from "@/assets/whats-in-your-water.jpg.asset.json";
+import whatsLurkingAsset from "@/assets/whats-lurking.jpg.asset.json";
+import contaminantsAsset from "@/assets/contaminants.jpg.asset.json";
 import residentialImg from "@/assets/product-residential.jpg";
 import commercialImg from "@/assets/product-commercial.jpg";
 import partsImg from "@/assets/product-parts.jpg";
