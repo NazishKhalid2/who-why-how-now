@@ -153,12 +153,12 @@ function HomePage() {
             </div>
           </Reveal>
         </div>
-        <WaveDivider className="text-background" />
       </section>
 
       {/* Trust bar */}
-      <section className="border-b border-input px-4 py-8 sm:px-6 lg:px-8">
-        <Reveal className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-10 gap-y-5">
+      <section className="border-y border-input bg-background px-4 py-7 sm:px-6 lg:px-8">
+        <Reveal className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-10 gap-y-4">
+
           {trustItems.map((t) => (
             <div key={t.label} className="flex items-center gap-2.5 text-sm font-semibold text-muted-foreground">
               <t.icon className="h-5 w-5 text-primary" />
