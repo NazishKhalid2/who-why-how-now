@@ -22,7 +22,7 @@ export const Route = createFileRoute("/book")({
 });
 
 const inputCls =
-  "w-full rounded-xl border border-input bg-background/40 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/30";
+  "w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/30";
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
