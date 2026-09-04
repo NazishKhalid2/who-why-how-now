@@ -145,8 +145,8 @@ function HomePage() {
               <img
                 src={images.heroImg}
                 alt="MENA AQUA Tru reverse osmosis purification system"
-                width={1344}
-                height={896}
+                width={1200}
+                height={900}
                 className="h-auto w-full object-cover"
               />
             </div>
