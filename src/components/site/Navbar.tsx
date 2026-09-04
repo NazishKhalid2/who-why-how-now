@@ -39,7 +39,7 @@ export function Navbar() {
           <img
             src={logo.url}
             alt="MENA AQUA Tru"
-            className="h-9 w-auto brightness-125 contrast-125"
+            className="h-7 w-auto sm:h-8"
           />
         </Link>
 

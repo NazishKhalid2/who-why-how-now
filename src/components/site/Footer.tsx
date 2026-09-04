@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="border-t border-input bg-deep">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
         <div>
-          <img src={logo.url} alt="MENA AQUA Tru" loading="lazy" className="h-9 w-auto brightness-125 contrast-125" />
+          <img src={logo.url} alt="MENA AQUA Tru" loading="lazy" className="h-7 w-auto sm:h-8" />
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
             Whole house water solutions for UAE homes and businesses — engineered, installed and
             maintained by certified specialists since 2012.
