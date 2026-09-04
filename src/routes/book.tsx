@@ -7,13 +7,13 @@ export const Route = createFileRoute("/book")({
   component: BookPage,
   head: () => ({
     meta: [
-      { title: "Book an Appointment — AquaPure UAE" },
+      { title: "Book an Appointment — MENA AQUA Tru UAE" },
       {
         name: "description",
         content:
           "Book a free water test and consultation. Choose your date and time — a certified specialist visits your home or business anywhere in the UAE.",
       },
-      { property: "og:title", content: "Book an Appointment — AquaPure UAE" },
+      { property: "og:title", content: "Book an Appointment — MENA AQUA Tru UAE" },
       { property: "og:description", content: "Book a free water test and consultation anywhere in the UAE." },
       { property: "og:url", content: "/book" },
     ],
@@ -132,7 +132,7 @@ function BookPage() {
                 </div>
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_30px_oklch(0.84_0.135_184/50%)] sm:col-span-2"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_30px_oklch(0.82_0.125_205/50%)] sm:col-span-2"
                 >
                   <CalendarCheck className="h-4 w-4" /> Confirm Booking Request
                 </button>

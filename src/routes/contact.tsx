@@ -7,14 +7,14 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
   head: () => ({
     meta: [
-      { title: "Contact Us — AquaPure UAE" },
+      { title: "Contact Us — MENA AQUA Tru UAE" },
       {
         name: "description",
         content:
-          "Reach AquaPure by phone, WhatsApp or email — or visit our Al Quoz, Dubai warehouse. Emergency support 24/7 for AMC clients.",
+          "Reach MENA AQUA Tru by phone, WhatsApp or email — or visit our Al Quoz, Dubai warehouse. Emergency support 24/7 for AMC clients.",
       },
-      { property: "og:title", content: "Contact Us — AquaPure UAE" },
-      { property: "og:description", content: "Phone, WhatsApp, email and location for AquaPure UAE." },
+      { property: "og:title", content: "Contact Us — MENA AQUA Tru UAE" },
+      { property: "og:description", content: "Phone, WhatsApp, email and location for MENA AQUA Tru UAE." },
       { property: "og:url", content: "/contact" },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
@@ -94,7 +94,7 @@ function ContactPage() {
                   </label>
                   <button
                     type="submit"
-                    className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_30px_oklch(0.84_0.135_184/50%)]"
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_30px_oklch(0.82_0.125_205/50%)]"
                   >
                     <Send className="h-4 w-4" /> Send Message
                   </button>
@@ -107,7 +107,7 @@ function ContactPage() {
             <div className="flex h-full flex-col gap-6">
               <div className="glass overflow-hidden rounded-3xl">
                 <iframe
-                  title="AquaPure location — Al Quoz 3, Dubai"
+                  title="MENA AQUA Tru location — Al Quoz 3, Dubai"
                   src="https://www.openstreetmap.org/export/embed.html?bbox=55.205%2C25.12%2C55.26%2C25.165&layer=mapnik&marker=25.1425%2C55.2325"
                   className="h-64 w-full border-0"
                   loading="lazy"
@@ -117,7 +117,7 @@ function ContactPage() {
                 {[
                   { icon: Phone, label: "Phone", value: "+971 4 555 0123" },
                   { icon: MessageCircle, label: "WhatsApp", value: "+971 50 555 0123" },
-                  { icon: Mail, label: "Email", value: "care@aquapure.ae" },
+                  { icon: Mail, label: "Email", value: "care@menaaquatru.ae" },
                   { icon: MapPin, label: "Address", value: "Warehouse 12, Al Quoz 3, Dubai" },
                   { icon: Clock, label: "Sat – Thu", value: "8:00 AM – 8:00 PM" },
                   { icon: Clock, label: "Friday", value: "2:00 PM – 8:00 PM" },

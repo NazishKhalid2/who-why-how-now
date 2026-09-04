@@ -1,8 +1,10 @@
-import heroImg from "@/assets/hero.jpg";
+import lineupAsset from "@/assets/aquatru-lineup.jpg.asset.json";
 import residentialImg from "@/assets/product-residential.jpg";
 import commercialImg from "@/assets/product-commercial.jpg";
 import partsImg from "@/assets/product-parts.jpg";
 import aboutImg from "@/assets/about.jpg";
+
+const heroImg = lineupAsset.url;
 
 export const images = { heroImg, residentialImg, commercialImg, partsImg, aboutImg };
 

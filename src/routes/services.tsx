@@ -7,13 +7,13 @@ export const Route = createFileRoute("/services")({
   component: ServicesPage,
   head: () => ({
     meta: [
-      { title: "Services — AquaPure UAE" },
+      { title: "Services — MENA AQUA Tru UAE" },
       {
         name: "description",
         content:
           "Installation, annual maintenance (AMC), water testing and repairs — certified water specialists covering all emirates.",
       },
-      { property: "og:title", content: "Services — AquaPure UAE" },
+      { property: "og:title", content: "Services — MENA AQUA Tru UAE" },
       { property: "og:description", content: "Installation, AMC plans, water testing and repairs across the UAE." },
       { property: "og:url", content: "/services" },
     ],
@@ -60,7 +60,7 @@ function ServicesPage() {
           </h1>
           <p className="mx-auto mt-6 max-w-2xl leading-relaxed text-muted-foreground">
             A purification system is only as good as its maintenance. That's why our service team is
-            the heart of AquaPure.
+            the heart of MENA AQUA Tru.
           </p>
         </Reveal>
       </section>

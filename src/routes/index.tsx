@@ -22,13 +22,13 @@ export const Route = createFileRoute("/")({
   component: HomePage,
   head: () => ({
     meta: [
-      { title: "AquaPure UAE — Pure Water for Homes & Businesses" },
+      { title: "MENA AQUA Tru UAE — Pure Water for Homes & Businesses" },
       {
         name: "description",
         content:
           "Certified water purification systems, expert installation and 24/7 support across the UAE. 500+ installations. Book a free water test and consultation today.",
       },
-      { property: "og:title", content: "AquaPure UAE — Pure Water for Homes & Businesses" },
+      { property: "og:title", content: "MENA AQUA Tru UAE — Pure Water for Homes & Businesses" },
       {
         property: "og:description",
         content:
@@ -128,7 +128,7 @@ function HomePage() {
             <div className="mt-9 flex flex-wrap gap-4">
               <Link
                 to="/book"
-                className="rounded-full bg-primary px-8 py-4 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_30px_oklch(0.84_0.135_184/50%)]"
+                className="rounded-full bg-primary px-8 py-4 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_30px_oklch(0.82_0.125_205/50%)]"
               >
                 Book a Free Consultation
               </Link>
@@ -144,9 +144,9 @@ function HomePage() {
             <div className="glass glow-hover overflow-hidden rounded-3xl">
               <img
                 src={images.heroImg}
-                alt="AquaPure reverse osmosis purification system"
-                width={1344}
-                height={896}
+                alt="MENA AQUA Tru reverse osmosis purification system"
+                width={1200}
+                height={900}
                 className="h-auto w-full object-cover"
               />
             </div>
@@ -174,7 +174,7 @@ function HomePage() {
             <div className="glass glow-hover overflow-hidden rounded-3xl">
               <img
                 src={images.aboutImg}
-                alt="AquaPure technician testing drinking water in a Dubai home"
+                alt="MENA AQUA Tru technician testing drinking water in a Dubai home"
                 width={1024}
                 height={768}
                 loading="lazy"
@@ -188,7 +188,7 @@ function HomePage() {
               Water specialists you can invite into your home
             </h2>
             <p className="mt-5 leading-relaxed text-muted-foreground">
-              Since 2012, AquaPure has helped UAE families and businesses stop worrying about what
+              Since 2012, MENA AQUA Tru has helped UAE families and businesses stop worrying about what
               comes out of their taps. Our in-house engineers and municipality-approved technicians
               handle everything — testing, installation, maintenance — with one accountable team.
             </p>

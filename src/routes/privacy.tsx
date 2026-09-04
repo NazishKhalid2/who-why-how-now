@@ -5,9 +5,9 @@ export const Route = createFileRoute("/privacy")({
   component: PrivacyPage,
   head: () => ({
     meta: [
-      { title: "Privacy Policy — AquaPure UAE" },
-      { name: "description", content: "How AquaPure Water Solutions collects, uses and protects your personal information." },
-      { property: "og:title", content: "Privacy Policy — AquaPure UAE" },
+      { title: "Privacy Policy — MENA AQUA Tru UAE" },
+      { name: "description", content: "How MENA AQUA Tru Water Solutions collects, uses and protects your personal information." },
+      { property: "og:title", content: "Privacy Policy — MENA AQUA Tru UAE" },
       { property: "og:url", content: "/privacy" },
     ],
     links: [{ rel: "canonical", href: "/privacy" }],
@@ -33,11 +33,11 @@ const sections = [
   },
   {
     title: "Your rights",
-    body: "You may request a copy, correction or deletion of your personal data at any time by emailing care@aquapure.ae. We respond to all requests within 7 working days.",
+    body: "You may request a copy, correction or deletion of your personal data at any time by emailing care@menaaquatru.ae. We respond to all requests within 7 working days.",
   },
   {
     title: "Contact",
-    body: "Questions about this policy: AquaPure Water Solutions LLC, Warehouse 12, Al Quoz 3, Dubai, UAE · care@aquapure.ae · +971 4 555 0123.",
+    body: "Questions about this policy: MENA AQUA Tru Water Solutions LLC, Warehouse 12, Al Quoz 3, Dubai, UAE · care@menaaquatru.ae · +971 4 555 0123.",
   },
 ];
 

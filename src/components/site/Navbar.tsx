@@ -1,7 +1,8 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Droplets, Menu, X, CalendarCheck } from "lucide-react";
+import { Menu, X, CalendarCheck } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/aquatru-logo.png.asset.json";
 
 const links = [
   { to: "/", label: "Home" },
@@ -34,14 +35,12 @@ export function Navbar() {
       )}
     >
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link to="/" className="flex items-center gap-2" aria-label="AquaPure home">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-primary-foreground">
-            <Droplets className="h-5 w-5" />
-          </span>
-          <span className="font-display text-lg font-extrabold tracking-wide">
-            Aqua<span className="text-primary">Pure</span>
-            <span className="ml-1 text-xs font-medium text-muted-foreground">UAE</span>
-          </span>
+        <Link to="/" className="flex items-center gap-2" aria-label="MENA AQUA Tru home">
+          <img
+            src={logo.url}
+            alt="MENA AQUA Tru"
+            className="h-7 w-auto sm:h-8"
+          />
         </Link>
 
         <div className="hidden items-center gap-7 lg:flex">
@@ -69,7 +68,7 @@ export function Navbar() {
           </button>
           <Link
             to="/book"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_24px_oklch(0.84_0.135_184/45%)]"
+            className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_24px_oklch(0.82_0.125_205/45%)]"
           >
             <CalendarCheck className="h-4 w-4" />
             Book Appointment

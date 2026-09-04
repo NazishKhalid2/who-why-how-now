@@ -5,9 +5,9 @@ export const Route = createFileRoute("/terms")({
   component: TermsPage,
   head: () => ({
     meta: [
-      { title: "Terms & Conditions — AquaPure UAE" },
-      { name: "description", content: "Terms of service for AquaPure Water Solutions products, installation and maintenance plans in the UAE." },
-      { property: "og:title", content: "Terms & Conditions — AquaPure UAE" },
+      { title: "Terms & Conditions — MENA AQUA Tru UAE" },
+      { name: "description", content: "Terms of service for MENA AQUA Tru Water Solutions products, installation and maintenance plans in the UAE." },
+      { property: "og:title", content: "Terms & Conditions — MENA AQUA Tru UAE" },
       { property: "og:url", content: "/terms" },
     ],
     links: [{ rel: "canonical", href: "/terms" }],
