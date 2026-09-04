@@ -112,18 +112,17 @@ function BookPage() {
                     ))}
                   </select>
                 </Field>
-                <div className="grid grid-cols-2 gap-4">
-                  <Field label="Preferred Date *">
-                    <input name="date" type="date" className={inputCls} />
-                  </Field>
-                  <Field label="Preferred Time">
-                    <select name="time" className={inputCls} defaultValue="Morning (8–12)">
-                      {["Morning (8–12)", "Afternoon (12–4)", "Evening (4–8)"].map((o) => (
-                        <option key={o}>{o}</option>
-                      ))}
-                    </select>
-                  </Field>
-                </div>
+                <Field label="Preferred Date *">
+                  <input name="date" type="date" className={inputCls} />
+                </Field>
+                <Field label="Preferred Time">
+                  <select name="time" className={inputCls} defaultValue="Morning (8–12)">
+                    {["Morning (8–12)", "Afternoon (12–4)", "Evening (4–8)"].map((o) => (
+                      <option key={o}>{o}</option>
+                    ))}
+                  </select>
+                </Field>
+
                 {errors["date"] && <p className="-mt-3 text-xs font-medium text-destructive sm:col-span-2">{errors["date"]}</p>}
                 <div className="sm:col-span-2">
                   <Field label="Notes">
