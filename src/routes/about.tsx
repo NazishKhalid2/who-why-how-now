@@ -8,13 +8,13 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
   head: () => ({
     meta: [
-      { title: "About Us — AquaPure UAE" },
+      { title: "About Us — MENA AQUA Tru UAE" },
       {
         name: "description",
         content:
-          "Since 2012, AquaPure has delivered certified water purification to 500+ UAE homes and businesses. Meet the team behind the trust.",
+          "Since 2012, MENA AQUA Tru has delivered certified water purification to 500+ UAE homes and businesses. Meet the team behind the trust.",
       },
-      { property: "og:title", content: "About Us — AquaPure UAE" },
+      { property: "og:title", content: "About Us — MENA AQUA Tru UAE" },
       { property: "og:description", content: "Certified water purification specialists serving the UAE since 2012." },
       { property: "og:url", content: "/about" },
     ],
@@ -35,12 +35,12 @@ function AboutPage() {
       <section className="relative overflow-hidden bg-underwater px-4 pb-20 pt-36 sm:px-6 lg:px-8">
         <div className="pointer-events-none absolute -top-24 right-0 h-96 w-96 rounded-full bg-primary/15 blur-3xl animate-drift" />
         <Reveal className="relative mx-auto max-w-3xl text-center">
-          <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary">About AquaPure</p>
+          <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary">About MENA AQUA Tru</p>
           <h1 className="mt-5 font-display text-4xl font-extrabold tracking-tight sm:text-5xl">
             Who we are — and why water is all we do
           </h1>
           <p className="mx-auto mt-6 max-w-2xl leading-relaxed text-muted-foreground">
-            AquaPure was founded in Dubai in 2012 on a simple observation: families were buying
+            MENA AQUA Tru was founded in Dubai in 2012 on a simple observation: families were buying
             bottled water because they didn't trust their taps — and nobody was fixing the root
             cause. We set out to change that, one building at a time.
           </p>
@@ -53,7 +53,7 @@ function AboutPage() {
             <div className="glass glow-hover overflow-hidden rounded-3xl">
               <img
                 src={images.aboutImg}
-                alt="AquaPure specialist at work in a UAE home"
+                alt="MENA AQUA Tru specialist at work in a UAE home"
                 width={1024}
                 height={768}
                 loading="lazy"
@@ -125,7 +125,7 @@ function AboutPage() {
         <Reveal className="mt-12 text-center">
           <Link
             to="/book"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_30px_oklch(0.84_0.135_184/50%)]"
+            className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_30px_oklch(0.82_0.125_205/50%)]"
           >
             <Droplets className="h-4 w-4" /> Book Your Free Water Test
           </Link>

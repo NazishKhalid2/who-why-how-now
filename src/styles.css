@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * AquaPure design system — deep-teal "underwater" theme.
+ * MENA AQUA Tru design system — deep-teal "underwater" theme.
  * Primary surfaces are deep teal; accent is vivid aqua cyan.
  */
 
@@ -98,7 +98,7 @@
   }
 
   ::selection {
-    background: oklch(0.84 0.135 184 / 30%);
+    background: oklch(0.82 0.125 205 / 30%);
   }
 }
 
@@ -106,35 +106,35 @@
 
 @utility bg-underwater {
   background:
-    radial-gradient(60rem 30rem at 80% -10%, oklch(0.84 0.135 184 / 14%), transparent 60%),
-    radial-gradient(50rem 28rem at 10% 20%, oklch(0.55 0.1 210 / 16%), transparent 60%),
-    linear-gradient(180deg, var(--deep-2), var(--deep) 45%, oklch(0.23 0.04 199));
+    radial-gradient(60rem 30rem at 80% -10%, oklch(0.82 0.125 205 / 16%), transparent 60%),
+    radial-gradient(50rem 28rem at 10% 20%, oklch(0.6 0.11 240 / 18%), transparent 60%),
+    linear-gradient(180deg, var(--deep-2), var(--deep) 45%, oklch(0.31 0.05 237));
 }
 
 @utility bg-caustics {
   background-image:
-    radial-gradient(40rem 18rem at 15% 0%, oklch(0.84 0.135 184 / 10%), transparent 60%),
-    radial-gradient(36rem 16rem at 85% 10%, oklch(0.6 0.12 200 / 12%), transparent 60%);
+    radial-gradient(40rem 18rem at 15% 0%, oklch(0.82 0.125 205 / 12%), transparent 60%),
+    radial-gradient(36rem 16rem at 85% 10%, oklch(0.62 0.12 240 / 14%), transparent 60%);
 }
 
 @utility glass {
-  background: oklch(0.985 0.004 200 / 6%);
+  background: oklch(0.985 0.004 230 / 6%);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid oklch(0.985 0.004 200 / 12%);
+  border: 1px solid oklch(0.985 0.004 230 / 12%);
   box-shadow: var(--shadow-soft);
 }
 
 @utility glass-strong {
-  background: oklch(0.985 0.004 200 / 9%);
+  background: oklch(0.985 0.004 230 / 9%);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid oklch(0.985 0.004 200 / 16%);
+  border: 1px solid oklch(0.985 0.004 230 / 16%);
   box-shadow: var(--shadow-soft);
 }
 
 @utility text-gradient-aqua {
-  background: linear-gradient(120deg, var(--aqua), oklch(0.75 0.12 200));
+  background: linear-gradient(120deg, var(--aqua), oklch(0.78 0.11 235));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -145,7 +145,7 @@
   &:hover {
     box-shadow: var(--glow-aqua);
     transform: translateY(-2px);
-    border-color: oklch(0.84 0.135 184 / 50%);
+    border-color: oklch(0.82 0.125 205 / 50%);
   }
 }
 

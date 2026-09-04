@@ -8,13 +8,13 @@ export const Route = createFileRoute("/blog")({
   component: BlogPage,
   head: () => ({
     meta: [
-      { title: "Blog — AquaPure UAE" },
+      { title: "Blog — MENA AQUA Tru UAE" },
       {
         name: "description",
         content:
-          "Plain-English guides to UAE water quality, purification technology and home water care from AquaPure specialists.",
+          "Plain-English guides to UAE water quality, purification technology and home water care from MENA AQUA Tru specialists.",
       },
-      { property: "og:title", content: "Blog — AquaPure UAE" },
+      { property: "og:title", content: "Blog — MENA AQUA Tru UAE" },
       { property: "og:description", content: "Guides to UAE water quality and purification from our specialists." },
       { property: "og:url", content: "/blog" },
     ],

@@ -10,13 +10,13 @@ export const Route = createFileRoute("/products")({
   component: ProductsPage,
   head: () => ({
     meta: [
-      { title: "Products — AquaPure UAE" },
+      { title: "Products — MENA AQUA Tru UAE" },
       {
         name: "description",
         content:
           "Residential RO systems, commercial filtration plants and genuine spare parts — engineered for UAE water conditions.",
       },
-      { property: "og:title", content: "Products — AquaPure UAE" },
+      { property: "og:title", content: "Products — MENA AQUA Tru UAE" },
       { property: "og:description", content: "RO systems, commercial plants and genuine spare parts for UAE water." },
       { property: "og:url", content: "/products" },
     ],

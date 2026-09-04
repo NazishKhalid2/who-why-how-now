@@ -28,7 +28,7 @@ function NotFoundComponent() {
         <div className="mt-8">
           <Link
             to="/"
-            className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_24px_oklch(0.84_0.135_184/45%)]"
+            className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_24px_oklch(0.82_0.125_205/45%)]"
           >
             Back to Home
           </Link>
@@ -81,20 +81,20 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "AquaPure UAE — Premium Water Purification" },
+      { title: "MENA AQUA Tru UAE — Premium Water Purification" },
       {
         name: "description",
         content:
-          "AquaPure delivers certified water purification systems, installation and maintenance for homes and businesses across the UAE.",
+          "MENA AQUA Tru delivers certified water purification systems, installation and maintenance for homes and businesses across the UAE.",
       },
-      { property: "og:title", content: "AquaPure UAE — Premium Water Purification" },
+      { property: "og:title", content: "MENA AQUA Tru UAE — Premium Water Purification" },
       {
         property: "og:description",
         content:
           "Certified RO systems, whole-house filtration and 24/7 support across the UAE. Book a free water test today.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "AquaPure UAE" },
+      { property: "og:site_name", content: "MENA AQUA Tru UAE" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
@@ -113,10 +113,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "AquaPure Water Solutions LLC",
+          name: "MENA AQUA Tru Water Solutions LLC",
           description: "Premium water purification systems and services in the UAE.",
           telephone: "+97145550123",
-          email: "care@aquapure.ae",
+          email: "care@menaaquatru.ae",
           address: {
             "@type": "PostalAddress",
             streetAddress: "Warehouse 12, Al Quoz 3",

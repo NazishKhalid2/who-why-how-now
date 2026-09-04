@@ -64,7 +64,7 @@ export function Footer() {
               <MessageCircle className="mt-0.5 h-4 w-4 shrink-0 text-primary" /> +971 50 555 0123 (WhatsApp)
             </li>
             <li className="flex items-start gap-3">
-              <Mail className="mt-0.5 h-4 w-4 shrink-0 text-primary" /> care@aquapure.ae
+              <Mail className="mt-0.5 h-4 w-4 shrink-0 text-primary" /> care@menaaquatru.ae
             </li>
             <li className="flex items-start gap-3">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
@@ -92,7 +92,7 @@ export function Footer() {
       </div>
       <div className="border-t border-input">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-5 text-xs text-muted-foreground sm:flex-row sm:px-6 lg:px-8">
-          <p>© 2026 AquaPure Water Solutions LLC. All rights reserved.</p>
+          <p>© 2026 MENA AQUA Tru Water Solutions LLC. All rights reserved.</p>
           <p>Dubai Municipality Approved · ISO 9001:2015 Certified</p>
         </div>
       </div>
