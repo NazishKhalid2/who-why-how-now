@@ -128,7 +128,7 @@ function HomePage() {
             <div className="mt-9 flex flex-wrap gap-4">
               <Link
                 to="/book"
-                className="rounded-full bg-primary px-8 py-4 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_30px_oklch(0.82_0.125_205/50%)]"
+                className="rounded-full bg-primary px-8 py-4 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_30px_oklch(0.6_0.115_218/40%)]"
               >
                 Book a Free Consultation
               </Link>

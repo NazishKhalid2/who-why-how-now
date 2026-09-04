@@ -132,7 +132,7 @@ function BookPage() {
                 </div>
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_30px_oklch(0.82_0.125_205/50%)] sm:col-span-2"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_30px_oklch(0.6_0.115_218/40%)] sm:col-span-2"
                 >
                   <CalendarCheck className="h-4 w-4" /> Confirm Booking Request
                 </button>

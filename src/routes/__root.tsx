@@ -28,7 +28,7 @@ function NotFoundComponent() {
         <div className="mt-8">
           <Link
             to="/"
-            className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_24px_oklch(0.82_0.125_205/45%)]"
+            className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_24px_oklch(0.6_0.115_218/35%)]"
           >
             Back to Home
           </Link>

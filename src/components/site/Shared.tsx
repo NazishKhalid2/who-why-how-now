@@ -80,7 +80,7 @@ export function CTABanner() {
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <a
             href="/book"
-            className="rounded-full bg-primary px-8 py-3.5 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_30px_oklch(0.82_0.125_205/50%)]"
+            className="rounded-full bg-primary px-8 py-3.5 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_30px_oklch(0.6_0.115_218/40%)]"
           >
             Book a Free Consultation
           </a>
