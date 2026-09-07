@@ -62,11 +62,21 @@ function BlogArticlePage() {
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <CalendarDays className="h-4 w-4 text-primary" />
-                {new Date(post.date).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}
+                {new Date(post.date).toLocaleDateString("en-GB", {
+                  day: "numeric",
+                  month: "long",
+                  year: "numeric",
+                })}
               </span>
             </div>
             <div className="glass mt-8 overflow-hidden rounded-3xl">
-              <img src={post.image} alt={post.title} width={1024} height={768} className="h-auto w-full object-cover" />
+              <img
+                src={post.image}
+                alt={post.title}
+                width={1024}
+                height={768}
+                className="h-auto w-full object-cover"
+              />
             </div>
             <div className="mt-10 space-y-6">
               {post.body.map((para, i) => (

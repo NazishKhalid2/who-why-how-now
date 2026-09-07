@@ -36,11 +36,7 @@ export function Navbar() {
     >
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-2" aria-label="MENA AQUA Tru home">
-          <img
-            src={logo.url}
-            alt="MENA AQUA Tru"
-            className="h-7 w-auto sm:h-8"
-          />
+          <img src={logo.url} alt="MENA AQUA Tru" className="h-7 w-auto sm:h-8" />
         </Link>
 
         <div className="hidden items-center gap-7 lg:flex">

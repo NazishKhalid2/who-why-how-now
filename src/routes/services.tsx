@@ -14,7 +14,10 @@ export const Route = createFileRoute("/services")({
           "Installation, annual maintenance (AMC), water testing and repairs — certified water specialists covering all emirates.",
       },
       { property: "og:title", content: "Services — MENA AQUA Tru UAE" },
-      { property: "og:description", content: "Installation, AMC plans, water testing and repairs across the UAE." },
+      {
+        property: "og:description",
+        content: "Installation, AMC plans, water testing and repairs across the UAE.",
+      },
       { property: "og:url", content: "/services" },
     ],
     links: [{ rel: "canonical", href: "/services" }],
@@ -26,19 +29,31 @@ const services = [
     icon: Wrench,
     title: "Installation",
     desc: "Certified technicians install under-sink, whole-house and commercial systems — commissioned, tested and explained before we leave. Most residential installs finish in a single visit.",
-    points: ["Next-day appointments", "Tidy, guaranteed workmanship", "Post-install water test included"],
+    points: [
+      "Next-day appointments",
+      "Tidy, guaranteed workmanship",
+      "Post-install water test included",
+    ],
   },
   {
     icon: CalendarClock,
     title: "Maintenance & AMC Plans",
     desc: "Annual contracts that keep your system at peak performance without you lifting a finger. We track filter life, schedule visits and sanitize the full system.",
-    points: ["Scheduled filter & membrane changes", "Full-system sanitization", "Priority 24/7 emergency line"],
+    points: [
+      "Scheduled filter & membrane changes",
+      "Full-system sanitization",
+      "Priority 24/7 emergency line",
+    ],
   },
   {
     icon: FlaskConical,
     title: "Water Testing",
     desc: "On-site TDS, chlorine and hardness testing with a clear written report — free with every consultation, and available as a standalone service for facilities.",
-    points: ["On-site digital testing", "Lab sampling for commercial clients", "Honest, obligation-free advice"],
+    points: [
+      "On-site digital testing",
+      "Lab sampling for commercial clients",
+      "Honest, obligation-free advice",
+    ],
   },
   {
     icon: Hammer,
@@ -75,7 +90,9 @@ function ServicesPage() {
                   <s.icon className="h-6 w-6" />
                 </span>
                 <h3 className="mt-5 text-xl font-bold">{s.title}</h3>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
+                  {s.desc}
+                </p>
                 <ul className="mt-5 space-y-2">
                   {s.points.map((pt) => (
                     <li key={pt} className="flex items-center gap-2 text-sm font-medium">

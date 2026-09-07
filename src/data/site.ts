@@ -33,7 +33,10 @@ export const products: Product[] = [
     image: residentialImg,
     price: "From AED 1,450",
     specs: [
-      { label: "Filtration stages", value: "6 (sediment, carbon x2, RO membrane, post-carbon, mineralizer)" },
+      {
+        label: "Filtration stages",
+        value: "6 (sediment, carbon x2, RO membrane, post-carbon, mineralizer)",
+      },
       { label: "Daily capacity", value: "280 litres / day" },
       { label: "TDS rejection", value: "Up to 99%" },
       { label: "Tank", value: "12 L pressurized storage" },

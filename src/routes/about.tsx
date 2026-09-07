@@ -15,7 +15,10 @@ export const Route = createFileRoute("/about")({
           "Since 2012, MENA AQUA Tru has delivered certified water purification to 500+ UAE homes and businesses. Meet the team behind the trust.",
       },
       { property: "og:title", content: "About Us — MENA AQUA Tru UAE" },
-      { property: "og:description", content: "Certified water purification specialists serving the UAE since 2012." },
+      {
+        property: "og:description",
+        content: "Certified water purification specialists serving the UAE since 2012.",
+      },
       { property: "og:url", content: "/about" },
     ],
     links: [{ rel: "canonical", href: "/about" }],
@@ -35,7 +38,9 @@ function AboutPage() {
       <section className="relative overflow-hidden bg-underwater px-4 pb-20 pt-36 sm:px-6 lg:px-8">
         <div className="pointer-events-none absolute -top-24 right-0 h-96 w-96 rounded-full bg-primary/15 blur-3xl animate-drift" />
         <Reveal className="relative mx-auto max-w-3xl text-center">
-          <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary">About MENA AQUA Tru</p>
+          <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary">
+            About MENA AQUA Tru
+          </p>
           <h1 className="mt-5 font-display text-4xl font-extrabold tracking-tight sm:text-5xl">
             Who we are — and why water is all we do
           </h1>
@@ -65,9 +70,10 @@ function AboutPage() {
             <h2 className="font-display text-3xl font-extrabold tracking-tight">Our story</h2>
             <p className="mt-5 leading-relaxed text-muted-foreground">
               What started as a two-person installation team is today a full-service water company:
-              in-house engineers, a genuine spare-parts warehouse in Al Muteena, Deira, and maintenance fleets
-              covering every emirate. Over 500 installations later, our approach hasn't changed —
-              test first, recommend honestly, and stand behind every system for life.
+              in-house engineers, a genuine spare-parts warehouse in Al Muteena, Deira, and
+              maintenance fleets covering every emirate. Over 500 installations later, our approach
+              hasn't changed — test first, recommend honestly, and stand behind every system for
+              life.
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground">
               We serve villas in Arabian Ranches, cafés in Sharjah, schools in Abu Dhabi and labour

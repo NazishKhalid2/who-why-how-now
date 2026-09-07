@@ -14,7 +14,10 @@ export const Route = createFileRoute("/contact")({
           "Reach MENA AQUA Tru by phone, WhatsApp or email — or visit our Al Muteena, Deira showroom in Dubai. Emergency support 24/7 for AMC clients.",
       },
       { property: "og:title", content: "Contact Us — MENA AQUA Tru UAE" },
-      { property: "og:description", content: "Phone, WhatsApp, email and location for MENA AQUA Tru UAE." },
+      {
+        property: "og:description",
+        content: "Phone, WhatsApp, email and location for MENA AQUA Tru UAE.",
+      },
       { property: "og:url", content: "/contact" },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
@@ -35,7 +38,8 @@ function ContactPage() {
     if (!String(data.get("name") ?? "").trim()) errs["name"] = "Please enter your name";
     const email = String(data.get("email") ?? "").trim();
     if (!email) errs["email"] = "Please enter your email";
-    else if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) errs["email"] = "Enter a valid email address";
+    else if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email))
+      errs["email"] = "Enter a valid email address";
     if (!String(data.get("message") ?? "").trim()) errs["message"] = "Please write a short message";
     setErrors(errs);
     if (Object.keys(errs).length === 0) setSent(true);
@@ -51,8 +55,8 @@ function ContactPage() {
             Talk to a water specialist
           </h1>
           <p className="mx-auto mt-6 max-w-xl leading-relaxed text-muted-foreground">
-            Questions about your water, your system, or a quote? We answer fast — usually within
-            the hour during working times.
+            Questions about your water, your system, or a quote? We answer fast — usually within the
+            hour during working times.
           </p>
         </Reveal>
       </section>
@@ -76,12 +80,25 @@ function ContactPage() {
                   <label className="block">
                     <span className="mb-1.5 block text-sm font-semibold">Name *</span>
                     <input name="name" className={inputCls} placeholder="Your name" />
-                    {errors["name"] && <p className="mt-1.5 text-xs font-medium text-destructive">{errors["name"]}</p>}
+                    {errors["name"] && (
+                      <p className="mt-1.5 text-xs font-medium text-destructive">
+                        {errors["name"]}
+                      </p>
+                    )}
                   </label>
                   <label className="block">
                     <span className="mb-1.5 block text-sm font-semibold">Email *</span>
-                    <input name="email" type="email" className={inputCls} placeholder="you@example.com" />
-                    {errors["email"] && <p className="mt-1.5 text-xs font-medium text-destructive">{errors["email"]}</p>}
+                    <input
+                      name="email"
+                      type="email"
+                      className={inputCls}
+                      placeholder="you@example.com"
+                    />
+                    {errors["email"] && (
+                      <p className="mt-1.5 text-xs font-medium text-destructive">
+                        {errors["email"]}
+                      </p>
+                    )}
                   </label>
                   <label className="block">
                     <span className="mb-1.5 block text-sm font-semibold">Phone</span>
@@ -89,8 +106,17 @@ function ContactPage() {
                   </label>
                   <label className="block">
                     <span className="mb-1.5 block text-sm font-semibold">Message *</span>
-                    <textarea name="message" rows={5} className={inputCls} placeholder="How can we help?" />
-                    {errors["message"] && <p className="mt-1.5 text-xs font-medium text-destructive">{errors["message"]}</p>}
+                    <textarea
+                      name="message"
+                      rows={5}
+                      className={inputCls}
+                      placeholder="How can we help?"
+                    />
+                    {errors["message"] && (
+                      <p className="mt-1.5 text-xs font-medium text-destructive">
+                        {errors["message"]}
+                      </p>
+                    )}
                   </label>
                   <button
                     type="submit"
@@ -124,7 +150,9 @@ function ContactPage() {
                   <div key={c.label} className="flex items-start gap-3">
                     <c.icon className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                     <div>
-                      <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">{c.label}</p>
+                      <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
+                        {c.label}
+                      </p>
                       <p className="mt-1 text-sm font-semibold">{c.value}</p>
                     </div>
                   </div>

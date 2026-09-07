@@ -41,7 +41,12 @@ export function SectionHeading({
         {title}
       </h2>
       {sub && (
-        <p className={cn("mt-4 leading-relaxed", dark ? "text-muted-foreground" : "text-mist-foreground/70")}>
+        <p
+          className={cn(
+            "mt-4 leading-relaxed",
+            dark ? "text-muted-foreground" : "text-mist-foreground/70",
+          )}
+        >
           {sub}
         </p>
       )}

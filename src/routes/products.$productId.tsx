@@ -15,7 +15,10 @@ export const Route = createFileRoute("/products/$productId")({
     meta: [
       { title: `${loaderData?.product.name ?? "Product"} — MENA AQUA Tru UAE` },
       { name: "description", content: loaderData?.product.tagline ?? "" },
-      { property: "og:title", content: `${loaderData?.product.name ?? "Product"} — MENA AQUA Tru UAE` },
+      {
+        property: "og:title",
+        content: `${loaderData?.product.name ?? "Product"} — MENA AQUA Tru UAE`,
+      },
       { property: "og:description", content: loaderData?.product.tagline ?? "" },
       { property: "og:type", content: "product" },
       { property: "og:url", content: `/products/${loaderData?.product.id ?? ""}` },
@@ -99,7 +102,10 @@ function ProductDetailPage() {
           <h2 className="font-display text-2xl font-extrabold tracking-tight">Specifications</h2>
           <dl className="glass mt-6 divide-y divide-border overflow-hidden rounded-3xl">
             {product.specs.map((s) => (
-              <div key={s.label} className="flex flex-col gap-1 px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
+              <div
+                key={s.label}
+                className="flex flex-col gap-1 px-6 py-4 sm:flex-row sm:items-center sm:justify-between"
+              >
                 <dt className="flex items-center gap-2 text-sm font-semibold">
                   <CheckCircle2 className="h-4 w-4 text-primary" /> {s.label}
                 </dt>
