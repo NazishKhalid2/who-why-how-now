@@ -15,7 +15,10 @@ export const Route = createFileRoute("/blog")({
           "Plain-English guides to UAE water quality, purification technology and home water care from MENA AQUA Tru specialists.",
       },
       { property: "og:title", content: "Blog — MENA AQUA Tru UAE" },
-      { property: "og:description", content: "Guides to UAE water quality and purification from our specialists." },
+      {
+        property: "og:description",
+        content: "Guides to UAE water quality and purification from our specialists.",
+      },
       { property: "og:url", content: "/blog" },
     ],
     links: [{ rel: "canonical", href: "/blog" }],
@@ -61,14 +64,20 @@ function BlogPage() {
                   <div className="flex items-center gap-4 text-xs text-muted-foreground">
                     <span className="inline-flex items-center gap-1.5">
                       <CalendarDays className="h-3.5 w-3.5" />
-                      {new Date(p.date).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}
+                      {new Date(p.date).toLocaleDateString("en-GB", {
+                        day: "numeric",
+                        month: "long",
+                        year: "numeric",
+                      })}
                     </span>
                     <span className="inline-flex items-center gap-1.5">
                       <User className="h-3.5 w-3.5" /> {p.author}
                     </span>
                   </div>
                   <h2 className="mt-3 text-lg font-bold leading-snug">{p.title}</h2>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{p.excerpt}</p>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
+                    {p.excerpt}
+                  </p>
                   <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-primary">
                     Read article
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

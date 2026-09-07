@@ -99,10 +99,26 @@ const steps = [
 ];
 
 const features = [
-  { icon: BadgeCheck, title: "Certified Technicians", desc: "Every installer is trained, background-checked and municipality-approved." },
-  { icon: Clock, title: "Fast Installation", desc: "Next-day appointments across Dubai, Sharjah, Abu Dhabi and the Northern Emirates." },
-  { icon: ShieldCheck, title: "Real Warranty", desc: "Up to 3 years on-site warranty — parts and labour, no fine print." },
-  { icon: Headset, title: "24/7 Support", desc: "A human answers, day or night. Emergency dispatch for AMC clients." },
+  {
+    icon: BadgeCheck,
+    title: "Certified Technicians",
+    desc: "Every installer is trained, background-checked and municipality-approved.",
+  },
+  {
+    icon: Clock,
+    title: "Fast Installation",
+    desc: "Next-day appointments across Dubai, Sharjah, Abu Dhabi and the Northern Emirates.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Real Warranty",
+    desc: "Up to 3 years on-site warranty — parts and labour, no fine print.",
+  },
+  {
+    icon: Headset,
+    title: "24/7 Support",
+    desc: "A human answers, day or night. Emergency dispatch for AMC clients.",
+  },
 ];
 
 function HomePage() {
@@ -113,7 +129,6 @@ function HomePage() {
         <div className="pointer-events-none absolute -top-24 right-0 h-[28rem] w-[28rem] rounded-full bg-primary/10 blur-3xl animate-drift" />
         <div className="pointer-events-none absolute bottom-0 left-0 h-[22rem] w-[22rem] rounded-full bg-deep-2/70 blur-3xl animate-drift-slow" />
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 pb-20 pt-14 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:pb-24 lg:pt-20">
-
           <Reveal>
             <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary">
               Water Purification · UAE
@@ -158,9 +173,11 @@ function HomePage() {
       {/* Trust bar */}
       <section className="border-y border-input bg-background px-4 py-7 sm:px-6 lg:px-8">
         <Reveal className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-10 gap-y-4">
-
           {trustItems.map((t) => (
-            <div key={t.label} className="flex items-center gap-2.5 text-sm font-semibold text-muted-foreground">
+            <div
+              key={t.label}
+              className="flex items-center gap-2.5 text-sm font-semibold text-muted-foreground"
+            >
               <t.icon className="h-5 w-5 text-primary" />
               {t.label}
             </div>
@@ -189,9 +206,10 @@ function HomePage() {
               Water specialists you can invite into your home
             </h2>
             <p className="mt-5 leading-relaxed text-muted-foreground">
-              Since 2012, MENA AQUA Tru has helped UAE families and businesses stop worrying about what
-              comes out of their taps. Our in-house engineers and municipality-approved technicians
-              handle everything — testing, installation, maintenance — with one accountable team.
+              Since 2012, MENA AQUA Tru has helped UAE families and businesses stop worrying about
+              what comes out of their taps. Our in-house engineers and municipality-approved
+              technicians handle everything — testing, installation, maintenance — with one
+              accountable team.
             </p>
             <ul className="mt-7 space-y-4">
               {[
@@ -233,7 +251,9 @@ function HomePage() {
                   <c.icon className="h-6 w-6" />
                 </span>
                 <h3 className="mt-5 text-lg font-bold">{c.title}</h3>
-                <p className="mt-2.5 flex-1 text-sm leading-relaxed text-muted-foreground">{c.desc}</p>
+                <p className="mt-2.5 flex-1 text-sm leading-relaxed text-muted-foreground">
+                  {c.desc}
+                </p>
                 <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-primary">
                   Learn more
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -271,10 +291,7 @@ function HomePage() {
 
       {/* Why trust us */}
       <section className="bg-deep-2/40 px-4 py-24 sm:px-6 lg:px-8">
-        <SectionHeading
-          eyebrow="Why Trust Us"
-          title="Built on proof, not promises"
-        />
+        <SectionHeading eyebrow="Why Trust Us" title="Built on proof, not promises" />
         <div className="mx-auto mt-14 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((f, i) => (
             <Reveal key={f.title} delay={i * 90} className="h-full">

@@ -1,5 +1,14 @@
 import { Link } from "@tanstack/react-router";
-import { Phone, Mail, MapPin, Clock, MessageCircle, Instagram, Facebook, Linkedin } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  MessageCircle,
+  Instagram,
+  Facebook,
+  Linkedin,
+} from "lucide-react";
 import logo from "@/assets/aquatru-logo.png.asset.json";
 
 export function Footer() {
@@ -27,7 +36,9 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="text-sm font-bold uppercase tracking-widest text-foreground">Quick Links</h3>
+          <h3 className="text-sm font-bold uppercase tracking-widest text-foreground">
+            Quick Links
+          </h3>
           <ul className="mt-4 space-y-2.5 text-sm text-muted-foreground">
             {[
               { to: "/about", label: "About Us" },
@@ -54,7 +65,8 @@ export function Footer() {
               <Phone className="mt-0.5 h-4 w-4 shrink-0 text-primary" /> 050-7183290
             </li>
             <li className="flex items-start gap-3">
-              <MessageCircle className="mt-0.5 h-4 w-4 shrink-0 text-primary" /> 050-7183290 (WhatsApp)
+              <MessageCircle className="mt-0.5 h-4 w-4 shrink-0 text-primary" /> 050-7183290
+              (WhatsApp)
             </li>
             <li className="flex items-start gap-3">
               <Mail className="mt-0.5 h-4 w-4 shrink-0 text-primary" /> sales.aquatru@gmail.com
@@ -67,7 +79,9 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="text-sm font-bold uppercase tracking-widest text-foreground">Working Hours</h3>
+          <h3 className="text-sm font-bold uppercase tracking-widest text-foreground">
+            Working Hours
+          </h3>
           <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
             <li className="flex items-start gap-3">
               <Clock className="mt-0.5 h-4 w-4 shrink-0 text-primary" />

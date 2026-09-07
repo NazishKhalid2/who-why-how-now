@@ -6,7 +6,11 @@ export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
       { title: "Privacy Policy — MENA AQUA Tru UAE" },
-      { name: "description", content: "How MENA AQUA Tru Water Solutions collects, uses and protects your personal information." },
+      {
+        name: "description",
+        content:
+          "How MENA AQUA Tru Water Solutions collects, uses and protects your personal information.",
+      },
       { property: "og:title", content: "Privacy Policy — MENA AQUA Tru UAE" },
       { property: "og:url", content: "/privacy" },
     ],
@@ -47,7 +51,9 @@ function PrivacyPage() {
       <div className="pointer-events-none absolute -top-24 right-1/4 h-96 w-96 rounded-full bg-primary/15 blur-3xl animate-drift" />
       <Reveal className="relative mx-auto max-w-3xl">
         <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary">Legal</p>
-        <h1 className="mt-5 font-display text-4xl font-extrabold tracking-tight sm:text-5xl">Privacy Policy</h1>
+        <h1 className="mt-5 font-display text-4xl font-extrabold tracking-tight sm:text-5xl">
+          Privacy Policy
+        </h1>
         <p className="mt-4 text-sm text-muted-foreground">Last updated: January 2026</p>
         <div className="mt-12 space-y-10">
           {sections.map((s) => (

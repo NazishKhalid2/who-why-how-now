@@ -14,7 +14,10 @@ export const Route = createFileRoute("/book")({
           "Book a free water test and consultation. Choose your date and time — a certified specialist visits your home or business anywhere in the UAE.",
       },
       { property: "og:title", content: "Book an Appointment — MENA AQUA Tru UAE" },
-      { property: "og:description", content: "Book a free water test and consultation anywhere in the UAE." },
+      {
+        property: "og:description",
+        content: "Book a free water test and consultation anywhere in the UAE.",
+      },
       { property: "og:url", content: "/book" },
     ],
     links: [{ rel: "canonical", href: "/book" }],
@@ -46,7 +49,8 @@ function BookPage() {
     if (!phone) errs["phone"] = "Please enter your phone number";
     else if (!/^[+\d][\d\s-]{6,}$/.test(phone)) errs["phone"] = "Enter a valid phone number";
     const email = String(data.get("email") ?? "").trim();
-    if (email && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) errs["email"] = "Enter a valid email address";
+    if (email && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email))
+      errs["email"] = "Enter a valid email address";
     if (!String(data.get("location") ?? "").trim()) errs["location"] = "Please enter your location";
     if (!String(data.get("date") ?? "")) errs["date"] = "Pick a preferred date";
     setErrors(errs);
@@ -85,22 +89,41 @@ function BookPage() {
               <form onSubmit={onSubmit} noValidate className="grid gap-5 sm:grid-cols-2">
                 <Field label="Full Name *">
                   <input name="name" className={inputCls} placeholder="Ahmed Al Falasi" />
-                  {errors["name"] && <p className="mt-1.5 text-xs font-medium text-destructive">{errors["name"]}</p>}
+                  {errors["name"] && (
+                    <p className="mt-1.5 text-xs font-medium text-destructive">{errors["name"]}</p>
+                  )}
                 </Field>
                 <Field label="Phone *">
                   <input name="phone" className={inputCls} placeholder="+971 5X XXX XXXX" />
-                  {errors["phone"] && <p className="mt-1.5 text-xs font-medium text-destructive">{errors["phone"]}</p>}
+                  {errors["phone"] && (
+                    <p className="mt-1.5 text-xs font-medium text-destructive">{errors["phone"]}</p>
+                  )}
                 </Field>
                 <Field label="Email">
-                  <input name="email" type="email" className={inputCls} placeholder="you@example.com" />
-                  {errors["email"] && <p className="mt-1.5 text-xs font-medium text-destructive">{errors["email"]}</p>}
+                  <input
+                    name="email"
+                    type="email"
+                    className={inputCls}
+                    placeholder="you@example.com"
+                  />
+                  {errors["email"] && (
+                    <p className="mt-1.5 text-xs font-medium text-destructive">{errors["email"]}</p>
+                  )}
                 </Field>
                 <Field label="Location / Address *">
                   <input name="location" className={inputCls} placeholder="Community, Emirate" />
-                  {errors["location"] && <p className="mt-1.5 text-xs font-medium text-destructive">{errors["location"]}</p>}
+                  {errors["location"] && (
+                    <p className="mt-1.5 text-xs font-medium text-destructive">
+                      {errors["location"]}
+                    </p>
+                  )}
                 </Field>
                 <Field label="Service Type">
-                  <select name="service" className={inputCls} defaultValue="Free Consultation & Water Test">
+                  <select
+                    name="service"
+                    className={inputCls}
+                    defaultValue="Free Consultation & Water Test"
+                  >
                     {[
                       "Free Consultation & Water Test",
                       "New System Installation",
@@ -123,10 +146,19 @@ function BookPage() {
                   </select>
                 </Field>
 
-                {errors["date"] && <p className="-mt-3 text-xs font-medium text-destructive sm:col-span-2">{errors["date"]}</p>}
+                {errors["date"] && (
+                  <p className="-mt-3 text-xs font-medium text-destructive sm:col-span-2">
+                    {errors["date"]}
+                  </p>
+                )}
                 <div className="sm:col-span-2">
                   <Field label="Notes">
-                    <textarea name="notes" rows={4} className={inputCls} placeholder="Tell us about your water concerns, property type, or existing system…" />
+                    <textarea
+                      name="notes"
+                      rows={4}
+                      className={inputCls}
+                      placeholder="Tell us about your water concerns, property type, or existing system…"
+                    />
                   </Field>
                 </div>
                 <button

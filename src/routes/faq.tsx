@@ -16,7 +16,10 @@ export const Route = createFileRoute("/faq")({
           "Answers about UAE tap water, filter replacement, installation times, warranties, free water testing and service coverage.",
       },
       { property: "og:title", content: "FAQ — MENA AQUA Tru UAE" },
-      { property: "og:description", content: "Common questions about water purification in the UAE, answered." },
+      {
+        property: "og:description",
+        content: "Common questions about water purification in the UAE, answered.",
+      },
       { property: "og:url", content: "/faq" },
     ],
     links: [{ rel: "canonical", href: "/faq" }],

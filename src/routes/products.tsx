@@ -17,7 +17,10 @@ export const Route = createFileRoute("/products")({
           "Residential RO systems, commercial filtration plants and genuine spare parts — engineered for UAE water conditions.",
       },
       { property: "og:title", content: "Products — MENA AQUA Tru UAE" },
-      { property: "og:description", content: "RO systems, commercial plants and genuine spare parts for UAE water." },
+      {
+        property: "og:description",
+        content: "RO systems, commercial plants and genuine spare parts for UAE water.",
+      },
       { property: "og:url", content: "/products" },
     ],
     links: [{ rel: "canonical", href: "/products" }],
@@ -87,7 +90,9 @@ function ProductsPage() {
                     {p.category}
                   </span>
                   <h3 className="mt-2 text-lg font-bold">{p.name}</h3>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{p.tagline}</p>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
+                    {p.tagline}
+                  </p>
                   <div className="mt-4 flex items-center justify-between">
                     <span className="text-sm font-bold text-foreground">{p.price}</span>
                     <span className="inline-flex items-center gap-1.5 text-sm font-bold text-primary">
