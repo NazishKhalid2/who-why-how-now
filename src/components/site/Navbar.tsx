@@ -55,16 +55,9 @@ export function Navbar() {
         </div>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <button
-            type="button"
-            className="rounded-full border border-input px-3 py-1 text-xs font-semibold text-muted-foreground transition-colors hover:border-primary hover:text-primary"
-            title="Arabic version coming soon"
-          >
-            EN / عربي
-          </button>
           <Link
             to="/book"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_24px_oklch(0.6_0.115_218/35%)]"
+            className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground transition-colors hover:bg-primary/90"
           >
             <CalendarCheck className="h-4 w-4" />
             Book Appointment
@@ -97,7 +90,7 @@ export function Navbar() {
             ))}
             <Link
               to="/book"
-              className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-bold text-primary-foreground"
+              className="mt-2 inline-flex items-center justify-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-bold text-primary-foreground"
             >
               <CalendarCheck className="h-4 w-4" />
               Book Appointment

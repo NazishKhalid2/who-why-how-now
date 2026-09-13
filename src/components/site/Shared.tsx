@@ -9,7 +9,7 @@ export function WhatsAppFloat() {
       target="_blank"
       rel="noreferrer"
       aria-label="Chat on WhatsApp"
-      className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-[0_10px_30px_-8px_oklch(0.6_0.115_218/50%)] transition-transform hover:scale-110"
+      className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-md transition-colors hover:bg-primary/90"
     >
       <MessageCircle className="h-6 w-6" />
     </a>
@@ -80,12 +80,12 @@ export function CTABanner() {
         </h2>
         <p className="mx-auto mt-5 max-w-xl leading-relaxed text-muted-foreground">
           Book a free consultation and water test today. A certified specialist will recommend the
-          right system for your home or business — no pressure, no obligation.
+          right system for your home or business. There is no obligation.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <a
             href="/book"
-            className="rounded-full bg-primary px-8 py-3.5 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_30px_oklch(0.6_0.115_218/40%)]"
+            className="rounded-md bg-primary px-8 py-3.5 text-sm font-bold text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Book a Free Consultation
           </a>
@@ -93,7 +93,7 @@ export function CTABanner() {
             href="https://wa.me/971507183290"
             target="_blank"
             rel="noreferrer"
-            className="glass rounded-full px-8 py-3.5 text-sm font-bold text-foreground transition-all hover:border-primary"
+            className="glass rounded-md px-8 py-3.5 text-sm font-bold text-foreground transition-colors hover:border-primary"
           >
             WhatsApp Us
           </a>
