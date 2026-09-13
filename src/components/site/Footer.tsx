@@ -1,14 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Clock,
-  MessageCircle,
-  Instagram,
-  Facebook,
-  Linkedin,
-} from "lucide-react";
+import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import logo from "@/assets/aquatru-logo.png.asset.json";
 
 export function Footer() {
@@ -18,21 +9,8 @@ export function Footer() {
         <div>
           <img src={logo.url} alt="MENA AQUA Tru" loading="lazy" className="h-7 w-auto sm:h-8" />
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-            Whole house water solutions for UAE homes and businesses — engineered, installed and
-            maintained by certified specialists since 2012.
+            Water filtration, softening and purification systems for homes and businesses in the UAE.
           </p>
-          <div className="mt-5 flex gap-3">
-            {[Instagram, Facebook, Linkedin].map((Icon, i) => (
-              <a
-                key={i}
-                href="#"
-                aria-label="Social link"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-input text-muted-foreground transition-all hover:border-primary hover:text-primary"
-              >
-                <Icon className="h-4 w-4" />
-              </a>
-            ))}
-          </div>
         </div>
 
         <div>
@@ -89,10 +67,7 @@ export function Footer() {
             </li>
             <li className="flex items-start gap-3">
               <Clock className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-              8:00 AM – 9:00 PM
-            </li>
-            <li className="rounded-xl border border-input bg-secondary/40 p-3 text-xs leading-relaxed">
-              Emergency support line answered 24/7 for AMC and commercial clients.
+              8:00 AM - 9:00 PM
             </li>
           </ul>
         </div>
@@ -100,7 +75,10 @@ export function Footer() {
       <div className="border-t border-input">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-5 text-xs text-muted-foreground sm:flex-row sm:px-6 lg:px-8">
           <p>© 2026 MENA AQUA Tru Water Solutions LLC. All rights reserved.</p>
-          <p>Dubai Municipality Approved · ISO 9001:2015 Certified</p>
+          <div className="flex gap-4">
+            <Link to="/privacy" className="hover:text-primary">Privacy</Link>
+            <Link to="/terms" className="hover:text-primary">Terms</Link>
+          </div>
         </div>
       </div>
     </footer>
