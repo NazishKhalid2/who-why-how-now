@@ -9,14 +9,13 @@ import {
   CalendarClock,
   Package,
   ClipboardCheck,
-  Star,
   ArrowRight,
   BadgeCheck,
   Headset,
 } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 import { SectionHeading, CTABanner } from "@/components/site/Shared";
-import { images, testimonials } from "@/data/site";
+import { images } from "@/data/site";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -26,13 +25,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Certified water purification systems, expert installation and 24/7 support across the UAE. 500+ installations. Book a free water test and consultation today.",
+          "Water purification systems, installation and maintenance for homes and businesses across the UAE. Book a free water test and consultation.",
       },
       { property: "og:title", content: "MENA AQUA Tru UAE, Pure Water for Homes & Businesses" },
       {
         property: "og:description",
         content:
-          "Certified water purification systems, expert installation and 24/7 support across the UAE. Book a free consultation.",
+          "Water purification systems, installation and maintenance across the UAE. Book a free consultation.",
       },
       { property: "og:url", content: "/" },
     ],
@@ -41,11 +40,10 @@ export const Route = createFileRoute("/")({
 });
 
 const trustItems = [
-  { icon: BadgeCheck, label: "Dubai Municipality Approved" },
-  { icon: Award, label: "ISO 9001:2015 Certified" },
-  { icon: ShieldCheck, label: "2-Year On-Site Warranty" },
-  { icon: Home, label: "500+ Installations" },
-  { icon: Clock, label: "Serving UAE Since 2012" },
+  { icon: Home, label: "Homes & businesses across the UAE" },
+  { icon: Wrench, label: "Installation, service & repairs" },
+  { icon: Package, label: "Genuine filters & spare parts" },
+  { icon: Clock, label: "Open 7 days, 8:00 AM to 9:00 PM" },
 ];
 
 const categories = [
@@ -64,7 +62,7 @@ const categories = [
   {
     icon: CalendarClock,
     title: "Maintenance Plans",
-    desc: "Annual AMC plans with scheduled filter changes, sanitization and priority 24/7 support.",
+    desc: "Annual maintenance plans with scheduled filter changes, sanitization and priority service.",
     to: "/services",
   },
   {
@@ -94,30 +92,30 @@ const steps = [
   {
     icon: Headset,
     title: "Lifetime Support",
-    desc: "24/7 phone and WhatsApp support with same-day technician dispatch.",
+    desc: "Phone and WhatsApp support 7 days a week, 8:00 AM to 9:00 PM.",
   },
 ];
 
 const features = [
   {
     icon: BadgeCheck,
-    title: "Certified Technicians",
-    desc: "Every installer is trained, background-checked and municipality-approved.",
+    title: "One Accountable Team",
+    desc: "The people who test your water are the people who install and service the system.",
   },
   {
     icon: Clock,
-    title: "Fast Installation",
-    desc: "Next-day appointments across Dubai, Sharjah, Abu Dhabi and the Northern Emirates.",
+    title: "Open Every Day",
+    desc: "Appointments 7 days a week, from 8:00 AM to 9:00 PM, across the UAE.",
   },
   {
     icon: ShieldCheck,
-    title: "Real Warranty",
-    desc: "Up to 3 years on-site warranty, parts and labour, no fine print.",
+    title: "Written Quotations",
+    desc: "The scope, price and warranty terms are confirmed in writing before any work starts.",
   },
   {
     icon: Headset,
-    title: "24/7 Support",
-    desc: "A human answers, day or night. Emergency dispatch for AMC clients.",
+    title: "Direct Support",
+    desc: "Call or WhatsApp 050-7183290 and speak to the team handling your system.",
   },
 ];
 
@@ -132,12 +130,11 @@ function HomePage() {
               Water Purification · UAE
             </p>
             <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
-              Pure water for every home and business in the{" "}
-              <span className="">Emirates</span>
+              Clean, tested water for homes and businesses in the UAE
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">
-              We design, install and maintain certified purification systems, so the water your
-              family drinks and your business serves is tested, pure and guaranteed.
+              We test your water, install the right filtration, softening or purification system,
+              and keep it serviced. Based in Al Muteena, Deira, Dubai.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <Link
@@ -187,15 +184,37 @@ function HomePage() {
       <section className="px-4 py-24 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2">
           <Reveal>
-            <div className="glass glow-hover overflow-hidden rounded-3xl">
-              <img
-                src={images.aboutImg}
-                alt="MENA AQUA Tru technician testing drinking water in a Dubai home"
-                width={1024}
-                height={768}
-                loading="lazy"
-                className="h-auto w-full object-cover"
-              />
+            <div className="glass rounded-3xl p-8">
+              <h3 className="text-sm font-bold uppercase tracking-widest text-primary">
+                MENA AQUA Tru Water Solutions LLC
+              </h3>
+              <dl className="mt-6 space-y-5 text-sm">
+                <div>
+                  <dt className="font-semibold">Where we are</dt>
+                  <dd className="mt-1 text-muted-foreground">
+                    Al Muteena, Deira, Dubai, United Arab Emirates
+                  </dd>
+                </div>
+                <div>
+                  <dt className="font-semibold">When we are open</dt>
+                  <dd className="mt-1 text-muted-foreground">
+                    7 days a week, 8:00 AM to 9:00 PM
+                  </dd>
+                </div>
+                <div>
+                  <dt className="font-semibold">What we do</dt>
+                  <dd className="mt-1 text-muted-foreground">
+                    Water testing, filtration, softening and purification systems, installation,
+                    maintenance and genuine spare parts.
+                  </dd>
+                </div>
+                <div>
+                  <dt className="font-semibold">How to reach us</dt>
+                  <dd className="mt-1 text-muted-foreground">
+                    Phone and WhatsApp 050-7183290, sales.aquatru@gmail.com
+                  </dd>
+                </div>
+              </dl>
             </div>
           </Reveal>
           <Reveal delay={120}>
@@ -204,16 +223,15 @@ function HomePage() {
               Water specialists you can invite into your home
             </h2>
             <p className="mt-5 leading-relaxed text-muted-foreground">
-              Since 2012, MENA AQUA Tru has helped UAE families and businesses stop worrying about
-              what comes out of their taps. Our in-house engineers and municipality-approved
-              technicians handle everything, testing, installation, maintenance, with one
-              accountable team.
+              MENA AQUA Tru supplies and services water filtration, softening and purification
+              systems for homes and businesses in the UAE. We test the water first, recommend a
+              system that fits it, install it, and look after it afterwards.
             </p>
             <ul className="mt-7 space-y-4">
               {[
                 "Free on-site water testing before we recommend anything",
-                "Transparent pricing, the quote is the price, always",
-                "One team for life: install, service and emergency support",
+                "Written quotations, so the price is agreed before work starts",
+                "One team for installation, servicing and spare parts",
               ].map((line) => (
                 <li key={line} className="flex items-start gap-3 text-sm font-medium">
                   <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
@@ -305,34 +323,6 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="px-4 py-24 sm:px-6 lg:px-8">
-        <SectionHeading
-          eyebrow="Testimonials"
-          title="Trusted across the Emirates"
-          sub="Real customers, real water tests, real results."
-        />
-        <div className="mx-auto mt-14 grid max-w-7xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {testimonials.map((t, i) => (
-            <Reveal key={t.name} delay={i * 90} className="h-full">
-              <figure className="glass flex h-full flex-col rounded-3xl p-7">
-                <div className="flex gap-1 text-primary">
-                  {Array.from({ length: t.rating }).map((_, s) => (
-                    <Star key={s} className="h-4 w-4 fill-current" />
-                  ))}
-                </div>
-                <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">
-                  "{t.quote}"
-                </blockquote>
-                <figcaption className="mt-5 border-t border-input pt-4">
-                  <p className="text-sm font-bold">{t.name}</p>
-                  <p className="text-xs text-muted-foreground">{t.location}</p>
-                </figcaption>
-              </figure>
-            </Reveal>
-          ))}
-        </div>
-      </section>
 
       <CTABanner />
     </>
