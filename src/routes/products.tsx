@@ -42,8 +42,7 @@ function ProductsPage() {
             Systems built for UAE water
           </h1>
           <p className="mx-auto mt-6 max-w-2xl leading-relaxed text-muted-foreground">
-            Every product we sell is one we install and service ourselves, selected for reliability
-            in Gulf heat, high-TDS feed water and storage-tank conditions.
+Every product we sell is one we install and service ourselves, chosen for UAE conditions: Gulf heat, high-TDS feed water and storage tanks.
           </p>
         </Reveal>
       </section>
@@ -72,19 +71,9 @@ function ProductsPage() {
               <Link
                 to="/products/$productId"
                 params={{ productId: p.id }}
-                className="glass glow-hover group flex h-full flex-col overflow-hidden rounded-3xl"
+                className="glass group flex h-full flex-col rounded-3xl p-6"
               >
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img
-                    src={p.image}
-                    alt={p.name}
-                    width={1024}
-                    height={768}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="flex flex-1 flex-col p-6">
+                <div className="flex flex-1 flex-col">
                   <span className="text-xs font-bold uppercase tracking-widest text-primary">
                     {p.category}
                   </span>

@@ -54,19 +54,8 @@ function ProductDetailPage() {
           >
             <ArrowLeft className="h-4 w-4" /> All products
           </Link>
-          <div className="mt-8 grid items-start gap-12 lg:grid-cols-2">
+          <div className="mt-8 max-w-3xl">
             <Reveal>
-              <div className="glass glow-hover overflow-hidden rounded-3xl">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  width={1024}
-                  height={768}
-                  className="h-auto w-full object-cover"
-                />
-              </div>
-            </Reveal>
-            <Reveal delay={120}>
               <span className="text-xs font-bold uppercase tracking-widest text-primary">
                 {product.category}
               </span>
@@ -74,7 +63,7 @@ function ProductDetailPage() {
                 {product.name}
               </h1>
               <p className="mt-5 leading-relaxed text-muted-foreground">{product.description}</p>
-              <p className="mt-6 font-display text-2xl font-extrabold">
+              <p className="mt-6 font-display text-2xl font-extrabold text-primary">
                 {product.price}
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
