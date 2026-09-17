@@ -10,13 +10,13 @@ export const Route = createFileRoute("/products")({
   component: ProductsPage,
   head: () => ({
     meta: [
-      { title: "Products — MENA AQUA Tru UAE" },
+      { title: "Products, MENA AQUA Tru UAE" },
       {
         name: "description",
         content:
-          "Residential RO systems, commercial filtration plants and genuine spare parts — engineered for UAE water conditions.",
+          "Residential RO systems, commercial filtration plants and genuine spare parts, engineered for UAE water conditions.",
       },
-      { property: "og:title", content: "Products — MENA AQUA Tru UAE" },
+      { property: "og:title", content: "Products, MENA AQUA Tru UAE" },
       {
         property: "og:description",
         content: "RO systems, commercial plants and genuine spare parts for UAE water.",
@@ -36,15 +36,13 @@ function ProductsPage() {
   return (
     <>
       <section className="relative overflow-hidden bg-underwater px-4 pb-16 pt-36 sm:px-6 lg:px-8">
-        <div className="pointer-events-none absolute -top-24 left-1/3 h-96 w-96 rounded-full bg-primary/15 blur-3xl animate-drift" />
         <Reveal className="relative mx-auto max-w-3xl text-center">
           <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary">Products</p>
           <h1 className="mt-5 font-display text-4xl font-extrabold tracking-tight sm:text-5xl">
             Systems built for UAE water
           </h1>
           <p className="mx-auto mt-6 max-w-2xl leading-relaxed text-muted-foreground">
-            Every product we sell is one we install and service ourselves — selected for reliability
-            in Gulf heat, high-TDS feed water and storage-tank conditions.
+Every product we sell is one we install and service ourselves, chosen for UAE conditions: Gulf heat, high-TDS feed water and storage tanks.
           </p>
         </Reveal>
       </section>
@@ -56,7 +54,7 @@ function ProductsPage() {
               key={f}
               onClick={() => setActive(f)}
               className={cn(
-                "rounded-full border px-5 py-2.5 text-sm font-semibold transition-all",
+                "rounded-md border px-5 py-2.5 text-sm font-semibold transition-all",
                 active === f
                   ? "border-primary bg-primary text-primary-foreground"
                   : "border-input text-muted-foreground hover:border-primary hover:text-primary",
@@ -73,19 +71,9 @@ function ProductsPage() {
               <Link
                 to="/products/$productId"
                 params={{ productId: p.id }}
-                className="glass glow-hover group flex h-full flex-col overflow-hidden rounded-3xl"
+                className="glass group flex h-full flex-col rounded-3xl p-6"
               >
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img
-                    src={p.image}
-                    alt={p.name}
-                    width={1024}
-                    height={768}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="flex flex-1 flex-col p-6">
+                <div className="flex flex-1 flex-col">
                   <span className="text-xs font-bold uppercase tracking-widest text-primary">
                     {p.category}
                   </span>

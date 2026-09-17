@@ -7,13 +7,13 @@ export const Route = createFileRoute("/book")({
   component: BookPage,
   head: () => ({
     meta: [
-      { title: "Book an Appointment — MENA AQUA Tru UAE" },
+      { title: "Book an Appointment, MENA AQUA Tru UAE" },
       {
         name: "description",
         content:
-          "Book a free water test and consultation. Choose your date and time — a certified specialist visits your home or business anywhere in the UAE.",
+          "Book a free water test and consultation. Choose your date and time, a certified specialist visits your home or business anywhere in the UAE.",
       },
-      { property: "og:title", content: "Book an Appointment — MENA AQUA Tru UAE" },
+      { property: "og:title", content: "Book an Appointment, MENA AQUA Tru UAE" },
       {
         property: "og:description",
         content: "Book a free water test and consultation anywhere in the UAE.",
@@ -59,7 +59,6 @@ function BookPage() {
 
   return (
     <section className="relative overflow-hidden bg-underwater px-4 pb-24 pt-36 sm:px-6 lg:px-8">
-      <div className="pointer-events-none absolute -top-24 left-1/4 h-96 w-96 rounded-full bg-primary/15 blur-3xl animate-drift" />
       <div className="relative mx-auto max-w-2xl">
         <Reveal className="text-center">
           <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary">The Next Step</p>
@@ -68,7 +67,7 @@ function BookPage() {
           </h1>
           <p className="mx-auto mt-5 max-w-xl leading-relaxed text-muted-foreground">
             A certified specialist will test your water, answer your questions and give you an
-            honest recommendation — free, with no obligation.
+            honest recommendation, free, with no obligation.
           </p>
         </Reveal>
 
@@ -81,7 +80,7 @@ function BookPage() {
                 </span>
                 <h2 className="mt-6 text-2xl font-bold">Request received</h2>
                 <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">
-                  Thank you — our team will call you within one working hour to confirm your
+                  Thank you, our team will call you within one working hour to confirm your
                   appointment. Prefer instant confirmation? Message us on WhatsApp at 050-7183290.
                 </p>
               </div>
@@ -139,8 +138,8 @@ function BookPage() {
                   <input name="date" type="date" className={inputCls} />
                 </Field>
                 <Field label="Preferred Time">
-                  <select name="time" className={inputCls} defaultValue="Morning (8–12)">
-                    {["Morning (8–12)", "Afternoon (12–4)", "Evening (4–8)"].map((o) => (
+                  <select name="time" className={inputCls} defaultValue="Morning (8-12)">
+                    {["Morning (8-12)", "Afternoon (12-4)", "Evening (4-8)"].map((o) => (
                       <option key={o}>{o}</option>
                     ))}
                   </select>
@@ -163,7 +162,7 @@ function BookPage() {
                 </div>
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_30px_oklch(0.6_0.115_218/40%)] sm:col-span-2"
+                  className="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-8 py-4 text-sm font-bold text-primary-foreground transition-all sm:col-span-2"
                 >
                   <CalendarCheck className="h-4 w-4" /> Confirm Booking Request
                 </button>

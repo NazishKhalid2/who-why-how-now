@@ -8,13 +8,13 @@ export const Route = createFileRoute("/blog")({
   component: BlogPage,
   head: () => ({
     meta: [
-      { title: "Blog — MENA AQUA Tru UAE" },
+      { title: "Blog, MENA AQUA Tru UAE" },
       {
         name: "description",
         content:
           "Plain-English guides to UAE water quality, purification technology and home water care from MENA AQUA Tru specialists.",
       },
-      { property: "og:title", content: "Blog — MENA AQUA Tru UAE" },
+      { property: "og:title", content: "Blog, MENA AQUA Tru UAE" },
       {
         property: "og:description",
         content: "Guides to UAE water quality and purification from our specialists.",
@@ -29,7 +29,6 @@ function BlogPage() {
   return (
     <>
       <section className="relative overflow-hidden bg-underwater px-4 pb-16 pt-36 sm:px-6 lg:px-8">
-        <div className="pointer-events-none absolute -top-24 left-1/4 h-96 w-96 rounded-full bg-primary/15 blur-3xl animate-drift" />
         <Reveal className="relative mx-auto max-w-3xl text-center">
           <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary">Blog</p>
           <h1 className="mt-5 font-display text-4xl font-extrabold tracking-tight sm:text-5xl">

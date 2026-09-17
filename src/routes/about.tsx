@@ -2,22 +2,21 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Droplets, Eye, Target, ShieldCheck, Award, BadgeCheck, Users } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 import { SectionHeading, CTABanner } from "@/components/site/Shared";
-import { images } from "@/data/site";
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,
   head: () => ({
     meta: [
-      { title: "About Us — MENA AQUA Tru UAE" },
+      { title: "About Us, MENA AQUA Tru UAE" },
       {
         name: "description",
         content:
-          "Since 2012, MENA AQUA Tru has delivered certified water purification to 500+ UAE homes and businesses. Meet the team behind the trust.",
+          "MENA AQUA Tru supplies, installs and services water filtration, softening and purification systems for homes and businesses in the UAE.",
       },
-      { property: "og:title", content: "About Us — MENA AQUA Tru UAE" },
+      { property: "og:title", content: "About Us, MENA AQUA Tru UAE" },
       {
         property: "og:description",
-        content: "Certified water purification specialists serving the UAE since 2012.",
+        content: "Water filtration, softening and purification specialists based in Al Muteena, Deira, Dubai.",
       },
       { property: "og:url", content: "/about" },
     ],
@@ -26,28 +25,27 @@ export const Route = createFileRoute("/about")({
 });
 
 const certs = [
-  { icon: BadgeCheck, label: "Dubai Municipality Approved Contractor" },
-  { icon: Award, label: "ISO 9001:2015 Quality Management" },
-  { icon: ShieldCheck, label: "NSF-Certified Components Only" },
-  { icon: Users, label: "Trained & Background-Checked Technicians" },
+  { icon: BadgeCheck, label: "On-site water testing before any recommendation" },
+  { icon: Award, label: "Written quotations with the scope agreed upfront" },
+  { icon: ShieldCheck, label: "Installation, servicing and genuine spare parts in-house" },
+  { icon: Users, label: "Open 7 days a week, 8:00 AM to 9:00 PM" },
 ];
 
 function AboutPage() {
   return (
     <>
       <section className="relative overflow-hidden bg-underwater px-4 pb-20 pt-36 sm:px-6 lg:px-8">
-        <div className="pointer-events-none absolute -top-24 right-0 h-96 w-96 rounded-full bg-primary/15 blur-3xl animate-drift" />
         <Reveal className="relative mx-auto max-w-3xl text-center">
           <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary">
             About MENA AQUA Tru
           </p>
           <h1 className="mt-5 font-display text-4xl font-extrabold tracking-tight sm:text-5xl">
-            Who we are — and why water is all we do
+            Who we are, and why water is all we do
           </h1>
           <p className="mx-auto mt-6 max-w-2xl leading-relaxed text-muted-foreground">
-            MENA AQUA Tru was founded in Dubai in 2012 on a simple observation: families were buying
-            bottled water because they didn't trust their taps — and nobody was fixing the root
-            cause. We set out to change that, one building at a time.
+            MENA AQUA Tru Water Solutions LLC supplies, installs and services water filtration,
+            softening and purification systems for homes and businesses across the UAE, from our
+            base in Al Muteena, Deira, Dubai.
           </p>
         </Reveal>
       </section>
@@ -55,29 +53,44 @@ function AboutPage() {
       <section className="px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2">
           <Reveal>
-            <div className="glass glow-hover overflow-hidden rounded-3xl">
-              <img
-                src={images.aboutImg}
-                alt="MENA AQUA Tru specialist at work in a UAE home"
-                width={1024}
-                height={768}
-                loading="lazy"
-                className="h-auto w-full object-cover"
-              />
+            <div className="glass rounded-3xl p-8">
+              <h3 className="text-sm font-bold uppercase tracking-widest text-primary">
+                At a glance
+              </h3>
+              <dl className="mt-6 space-y-5 text-sm">
+                <div>
+                  <dt className="font-semibold">Address</dt>
+                  <dd className="mt-1 text-muted-foreground">
+                    Al Muteena, Deira, Dubai, United Arab Emirates
+                  </dd>
+                </div>
+                <div>
+                  <dt className="font-semibold">Hours</dt>
+                  <dd className="mt-1 text-muted-foreground">7 days a week, 8:00 AM to 9:00 PM</dd>
+                </div>
+                <div>
+                  <dt className="font-semibold">Phone & WhatsApp</dt>
+                  <dd className="mt-1 text-muted-foreground">050-7183290</dd>
+                </div>
+                <div>
+                  <dt className="font-semibold">Email</dt>
+                  <dd className="mt-1 text-muted-foreground">sales.aquatru@gmail.com</dd>
+                </div>
+              </dl>
             </div>
           </Reveal>
           <Reveal delay={120}>
             <h2 className="font-display text-3xl font-extrabold tracking-tight">Our story</h2>
             <p className="mt-5 leading-relaxed text-muted-foreground">
-              What started as a two-person installation team is today a full-service water company:
-              in-house engineers, a genuine spare-parts warehouse in Al Muteena, Deira, and
-              maintenance fleets covering every emirate. Over 500 installations later, our approach
-              hasn't changed — test first, recommend honestly, and stand behind every system for
-              life.
+              Water is all we do. We test what comes out of your tap, explain the results in plain
+              terms, and recommend a system that matches the water rather than a fixed package.
+              Filtration, softening, reverse osmosis and UV sterilization for homes, and turnkey
+              plants for restaurants, offices and facilities.
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground">
-              We serve villas in Arabian Ranches, cafés in Sharjah, schools in Abu Dhabi and labour
-              accommodation in Jebel Ali — with the same standard of care.
+              After installation we stay involved: scheduled filter and membrane changes,
+              sanitization, repairs on all major brands, and genuine spare parts from our Al
+              Muteena base.
             </p>
           </Reveal>
         </div>
@@ -92,8 +105,8 @@ function AboutPage() {
               </span>
               <h3 className="mt-5 text-xl font-bold">Our Mission</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                To make bottled-water quality available at every tap in the UAE — sustainably,
-                affordably, and with service that never makes you chase us.
+                To make clean, tested water available at every tap in the UAE, with service that
+                continues long after installation day.
               </p>
             </div>
           </Reveal>
@@ -115,8 +128,8 @@ function AboutPage() {
       <section className="px-4 py-20 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Why Trust Us"
-          title="Certified, approved, accountable"
-          sub="Credentials you can verify — and a warranty you can actually use."
+          title="How we work"
+          sub="Straightforward commitments you can hold us to."
         />
         <div className="mx-auto mt-12 grid max-w-5xl gap-6 sm:grid-cols-2">
           {certs.map((c, i) => (
@@ -131,7 +144,7 @@ function AboutPage() {
         <Reveal className="mt-12 text-center">
           <Link
             to="/book"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_30px_oklch(0.6_0.115_218/40%)]"
+            className="inline-flex items-center gap-2 rounded-md bg-primary px-8 py-4 text-sm font-bold text-primary-foreground transition-all"
           >
             <Droplets className="h-4 w-4" /> Book Your Free Water Test
           </Link>
