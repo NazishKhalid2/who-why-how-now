@@ -5,13 +5,13 @@ export const Route = createFileRoute("/terms")({
   component: TermsPage,
   head: () => ({
     meta: [
-      { title: "Terms & Conditions — MENA AQUA Tru UAE" },
+      { title: "Terms & Conditions, MENA AQUA Tru UAE" },
       {
         name: "description",
         content:
           "Terms of service for MENA AQUA Tru Water Solutions products, installation and maintenance plans in the UAE.",
       },
-      { property: "og:title", content: "Terms & Conditions — MENA AQUA Tru UAE" },
+      { property: "og:title", content: "Terms & Conditions, MENA AQUA Tru UAE" },
       { property: "og:url", content: "/terms" },
     ],
     links: [{ rel: "canonical", href: "/terms" }],
@@ -52,7 +52,6 @@ const sections = [
 function TermsPage() {
   return (
     <section className="relative overflow-hidden bg-underwater px-4 pb-24 pt-36 sm:px-6 lg:px-8">
-      <div className="pointer-events-none absolute -top-24 left-1/4 h-96 w-96 rounded-full bg-primary/15 blur-3xl animate-drift" />
       <Reveal className="relative mx-auto max-w-3xl">
         <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary">Legal</p>
         <h1 className="mt-5 font-display text-4xl font-extrabold tracking-tight sm:text-5xl">

@@ -7,13 +7,13 @@ export const Route = createFileRoute("/services")({
   component: ServicesPage,
   head: () => ({
     meta: [
-      { title: "Services — MENA AQUA Tru UAE" },
+      { title: "Services, MENA AQUA Tru UAE" },
       {
         name: "description",
         content:
-          "Installation, annual maintenance (AMC), water testing and repairs — certified water specialists covering all emirates.",
+          "Installation, annual maintenance (AMC), water testing and repairs, certified water specialists covering all emirates.",
       },
-      { property: "og:title", content: "Services — MENA AQUA Tru UAE" },
+      { property: "og:title", content: "Services, MENA AQUA Tru UAE" },
       {
         property: "og:description",
         content: "Installation, AMC plans, water testing and repairs across the UAE.",
@@ -28,7 +28,7 @@ const services = [
   {
     icon: Wrench,
     title: "Installation",
-    desc: "Certified technicians install under-sink, whole-house and commercial systems — commissioned, tested and explained before we leave. Most residential installs finish in a single visit.",
+    desc: "Certified technicians install under-sink, whole-house and commercial systems, commissioned, tested and explained before we leave. Most residential installs finish in a single visit.",
     points: [
       "Next-day appointments",
       "Tidy, guaranteed workmanship",
@@ -48,7 +48,7 @@ const services = [
   {
     icon: FlaskConical,
     title: "Water Testing",
-    desc: "On-site TDS, chlorine and hardness testing with a clear written report — free with every consultation, and available as a standalone service for facilities.",
+    desc: "On-site TDS, chlorine and hardness testing with a clear written report, free with every consultation, and available as a standalone service for facilities.",
     points: [
       "On-site digital testing",
       "Lab sampling for commercial clients",
@@ -58,7 +58,7 @@ const services = [
   {
     icon: Hammer,
     title: "Repairs & Upgrades",
-    desc: "Leaks, low pressure, strange taste — we repair all major brands, not just our own. Genuine parts from our Al Muteena warehouse, fitted by specialists.",
+    desc: "Leaks, low pressure, strange taste, we repair all major brands, not just our own. Genuine parts from our Al Muteena warehouse, fitted by specialists.",
     points: ["All brands serviced", "Genuine spare parts", "Same-day dispatch in Dubai & Sharjah"],
   },
 ];
@@ -67,11 +67,10 @@ function ServicesPage() {
   return (
     <>
       <section className="relative overflow-hidden bg-underwater px-4 pb-16 pt-36 sm:px-6 lg:px-8">
-        <div className="pointer-events-none absolute -top-24 right-1/4 h-96 w-96 rounded-full bg-primary/15 blur-3xl animate-drift" />
         <Reveal className="relative mx-auto max-w-3xl text-center">
           <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary">Services</p>
           <h1 className="mt-5 font-display text-4xl font-extrabold tracking-tight sm:text-5xl">
-            We solve the problem — and keep it solved
+            We solve the problem, and keep it solved
           </h1>
           <p className="mx-auto mt-6 max-w-2xl leading-relaxed text-muted-foreground">
             A purification system is only as good as its maintenance. That's why our service team is

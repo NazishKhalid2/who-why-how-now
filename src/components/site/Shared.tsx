@@ -76,7 +76,7 @@ export function CTABanner() {
       <div className="pointer-events-none absolute inset-0 bg-caustics" />
       <Reveal className="relative mx-auto max-w-3xl text-center">
         <h2 className="font-display text-3xl font-extrabold tracking-tight sm:text-5xl">
-          Ready for water you can <span className="text-gradient-aqua">trust</span>?
+          Ready for water you can <span className="">trust</span>?
         </h2>
         <p className="mx-auto mt-5 max-w-xl leading-relaxed text-muted-foreground">
           Book a free consultation and water test today. A certified specialist will recommend the

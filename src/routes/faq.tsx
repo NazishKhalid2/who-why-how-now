@@ -9,13 +9,13 @@ export const Route = createFileRoute("/faq")({
   component: FaqPage,
   head: () => ({
     meta: [
-      { title: "FAQ — MENA AQUA Tru UAE" },
+      { title: "FAQ, MENA AQUA Tru UAE" },
       {
         name: "description",
         content:
           "Answers about UAE tap water, filter replacement, installation times, warranties, free water testing and service coverage.",
       },
-      { property: "og:title", content: "FAQ — MENA AQUA Tru UAE" },
+      { property: "og:title", content: "FAQ, MENA AQUA Tru UAE" },
       {
         property: "og:description",
         content: "Common questions about water purification in the UAE, answered.",
@@ -30,14 +30,13 @@ function FaqPage() {
   return (
     <>
       <section className="relative overflow-hidden bg-underwater px-4 pb-16 pt-36 sm:px-6 lg:px-8">
-        <div className="pointer-events-none absolute -top-24 left-1/3 h-96 w-96 rounded-full bg-primary/15 blur-3xl animate-drift" />
         <Reveal className="relative mx-auto max-w-3xl text-center">
           <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary">FAQ</p>
           <h1 className="mt-5 font-display text-4xl font-extrabold tracking-tight sm:text-5xl">
             Questions, answered honestly
           </h1>
           <p className="mx-auto mt-6 max-w-xl leading-relaxed text-muted-foreground">
-            Can't find what you're looking for? Call us or message on WhatsApp — a specialist, not a
+            Can't find what you're looking for? Call us or message on WhatsApp, a specialist, not a
             bot, will answer.
           </p>
         </Reveal>
@@ -67,7 +66,7 @@ function FaqPage() {
             <Link to="/contact" className="font-bold text-primary hover:underline">
               Get in touch
             </Link>{" "}
-            — or{" "}
+           , or{" "}
             <Link to="/book" className="font-bold text-primary hover:underline">
               book a free water test
             </Link>

@@ -18,9 +18,8 @@ import { WhatsAppFloat } from "@/components/site/Shared";
 function NotFoundComponent() {
   return (
     <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-underwater px-4">
-      <div className="pointer-events-none absolute -top-32 left-1/4 h-96 w-96 rounded-full bg-primary/10 blur-3xl animate-drift" />
       <div className="relative max-w-md text-center">
-        <p className="font-display text-8xl font-extrabold text-gradient-aqua">404</p>
+        <p className="font-display text-8xl font-extrabold">404</p>
         <h1 className="mt-4 text-2xl font-bold text-foreground">This page drifted away</h1>
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
           The page you're looking for doesn't exist or has moved. Let's get you back to clear water.
@@ -28,7 +27,7 @@ function NotFoundComponent() {
         <div className="mt-8">
           <Link
             to="/"
-            className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_24px_oklch(0.6_0.115_218/35%)]"
+            className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-bold text-primary-foreground transition-all"
           >
             Back to Home
           </Link>
@@ -60,13 +59,13 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
               router.invalidate();
               reset();
             }}
-            className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-foreground transition-colors hover:opacity-90"
+            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-bold text-primary-foreground transition-colors hover:opacity-90"
           >
             Try again
           </button>
           <a
             href="/"
-            className="inline-flex items-center justify-center rounded-full border border-input px-4 py-2 text-sm font-medium text-foreground transition-colors hover:border-primary"
+            className="inline-flex items-center justify-center rounded-md border border-input px-4 py-2 text-sm font-medium text-foreground transition-colors hover:border-primary"
           >
             Go home
           </a>
@@ -81,13 +80,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "MENA AQUA Tru UAE — Premium Water Purification" },
+      { title: "MENA AQUA Tru UAE, Premium Water Purification" },
       {
         name: "description",
         content:
           "MENA AQUA Tru delivers certified water purification systems, installation and maintenance for homes and businesses across the UAE.",
       },
-      { property: "og:title", content: "MENA AQUA Tru UAE — Premium Water Purification" },
+      { property: "og:title", content: "MENA AQUA Tru UAE, Premium Water Purification" },
       {
         property: "og:description",
         content:

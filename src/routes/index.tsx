@@ -22,13 +22,13 @@ export const Route = createFileRoute("/")({
   component: HomePage,
   head: () => ({
     meta: [
-      { title: "MENA AQUA Tru UAE — Pure Water for Homes & Businesses" },
+      { title: "MENA AQUA Tru UAE, Pure Water for Homes & Businesses" },
       {
         name: "description",
         content:
           "Certified water purification systems, expert installation and 24/7 support across the UAE. 500+ installations. Book a free water test and consultation today.",
       },
-      { property: "og:title", content: "MENA AQUA Tru UAE — Pure Water for Homes & Businesses" },
+      { property: "og:title", content: "MENA AQUA Tru UAE, Pure Water for Homes & Businesses" },
       {
         property: "og:description",
         content:
@@ -58,7 +58,7 @@ const categories = [
   {
     icon: Building2,
     title: "Commercial Filtration",
-    desc: "Turnkey RO plants for restaurants, offices, schools and facilities — sized to your demand.",
+    desc: "Turnkey RO plants for restaurants, offices, schools and facilities, sized to your demand.",
     to: "/products",
   },
   {
@@ -70,7 +70,7 @@ const categories = [
   {
     icon: Package,
     title: "Genuine Spare Parts",
-    desc: "Membranes, cartridges and fittings — genuine parts delivered and fitted across the UAE.",
+    desc: "Membranes, cartridges and fittings, genuine parts delivered and fitted across the UAE.",
     to: "/products",
   },
 ];
@@ -79,7 +79,7 @@ const steps = [
   {
     icon: ClipboardCheck,
     title: "Free Consultation",
-    desc: "We test your water on-site and recommend exactly what you need — nothing more.",
+    desc: "We test your water on-site and recommend exactly what you need, nothing more.",
   },
   {
     icon: Wrench,
@@ -112,7 +112,7 @@ const features = [
   {
     icon: ShieldCheck,
     title: "Real Warranty",
-    desc: "Up to 3 years on-site warranty — parts and labour, no fine print.",
+    desc: "Up to 3 years on-site warranty, parts and labour, no fine print.",
   },
   {
     icon: Headset,
@@ -126,8 +126,6 @@ function HomePage() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-underwater pt-16">
-        <div className="pointer-events-none absolute -top-24 right-0 h-[28rem] w-[28rem] rounded-full bg-primary/10 blur-3xl animate-drift" />
-        <div className="pointer-events-none absolute bottom-0 left-0 h-[22rem] w-[22rem] rounded-full bg-deep-2/70 blur-3xl animate-drift-slow" />
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 pb-20 pt-14 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:pb-24 lg:pt-20">
           <Reveal>
             <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary">
@@ -135,22 +133,22 @@ function HomePage() {
             </p>
             <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
               Pure water for every home and business in the{" "}
-              <span className="text-gradient-aqua">Emirates</span>
+              <span className="">Emirates</span>
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">
-              We design, install and maintain certified purification systems — so the water your
+              We design, install and maintain certified purification systems, so the water your
               family drinks and your business serves is tested, pure and guaranteed.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <Link
                 to="/book"
-                className="rounded-full bg-primary px-8 py-4 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_30px_oklch(0.6_0.115_218/40%)]"
+                className="rounded-md bg-primary px-8 py-4 text-sm font-bold text-primary-foreground transition-all"
               >
                 Book a Free Consultation
               </Link>
               <Link
                 to="/products"
-                className="glass inline-flex items-center gap-2 rounded-full px-8 py-4 text-sm font-bold text-foreground transition-all hover:border-primary"
+                className="glass inline-flex items-center gap-2 rounded-md px-8 py-4 text-sm font-bold text-foreground transition-colors hover:border-primary"
               >
                 View Products <ArrowRight className="h-4 w-4" />
               </Link>
@@ -208,13 +206,13 @@ function HomePage() {
             <p className="mt-5 leading-relaxed text-muted-foreground">
               Since 2012, MENA AQUA Tru has helped UAE families and businesses stop worrying about
               what comes out of their taps. Our in-house engineers and municipality-approved
-              technicians handle everything — testing, installation, maintenance — with one
+              technicians handle everything, testing, installation, maintenance, with one
               accountable team.
             </p>
             <ul className="mt-7 space-y-4">
               {[
                 "Free on-site water testing before we recommend anything",
-                "Transparent pricing — the quote is the price, always",
+                "Transparent pricing, the quote is the price, always",
                 "One team for life: install, service and emergency support",
               ].map((line) => (
                 <li key={line} className="flex items-start gap-3 text-sm font-medium">
@@ -238,7 +236,7 @@ function HomePage() {
         <SectionHeading
           eyebrow="How We Solve Your Problem"
           title="One partner for every drop"
-          sub="From a single kitchen tap to a full commercial plant — systems and services engineered for UAE water conditions."
+          sub="From a single kitchen tap to a full commercial plant, systems and services engineered for UAE water conditions."
         />
         <div className="mx-auto mt-14 grid max-w-7xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {categories.map((c, i) => (
@@ -269,7 +267,7 @@ function HomePage() {
         <SectionHeading
           eyebrow="The Next Step Is Easy"
           title="From first call to pure water in days"
-          sub="A simple, transparent process — you always know what happens next."
+          sub="A simple, transparent process, you always know what happens next."
         />
         <div className="mx-auto mt-14 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((s, i) => (

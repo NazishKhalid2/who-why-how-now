@@ -8,13 +8,13 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
   head: () => ({
     meta: [
-      { title: "About Us — MENA AQUA Tru UAE" },
+      { title: "About Us, MENA AQUA Tru UAE" },
       {
         name: "description",
         content:
           "Since 2012, MENA AQUA Tru has delivered certified water purification to 500+ UAE homes and businesses. Meet the team behind the trust.",
       },
-      { property: "og:title", content: "About Us — MENA AQUA Tru UAE" },
+      { property: "og:title", content: "About Us, MENA AQUA Tru UAE" },
       {
         property: "og:description",
         content: "Certified water purification specialists serving the UAE since 2012.",
@@ -36,17 +36,16 @@ function AboutPage() {
   return (
     <>
       <section className="relative overflow-hidden bg-underwater px-4 pb-20 pt-36 sm:px-6 lg:px-8">
-        <div className="pointer-events-none absolute -top-24 right-0 h-96 w-96 rounded-full bg-primary/15 blur-3xl animate-drift" />
         <Reveal className="relative mx-auto max-w-3xl text-center">
           <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary">
             About MENA AQUA Tru
           </p>
           <h1 className="mt-5 font-display text-4xl font-extrabold tracking-tight sm:text-5xl">
-            Who we are — and why water is all we do
+            Who we are, and why water is all we do
           </h1>
           <p className="mx-auto mt-6 max-w-2xl leading-relaxed text-muted-foreground">
             MENA AQUA Tru was founded in Dubai in 2012 on a simple observation: families were buying
-            bottled water because they didn't trust their taps — and nobody was fixing the root
+            bottled water because they didn't trust their taps, and nobody was fixing the root
             cause. We set out to change that, one building at a time.
           </p>
         </Reveal>
@@ -72,12 +71,12 @@ function AboutPage() {
               What started as a two-person installation team is today a full-service water company:
               in-house engineers, a genuine spare-parts warehouse in Al Muteena, Deira, and
               maintenance fleets covering every emirate. Over 500 installations later, our approach
-              hasn't changed — test first, recommend honestly, and stand behind every system for
+              hasn't changed, test first, recommend honestly, and stand behind every system for
               life.
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground">
               We serve villas in Arabian Ranches, cafés in Sharjah, schools in Abu Dhabi and labour
-              accommodation in Jebel Ali — with the same standard of care.
+              accommodation in Jebel Ali, with the same standard of care.
             </p>
           </Reveal>
         </div>
@@ -92,7 +91,7 @@ function AboutPage() {
               </span>
               <h3 className="mt-5 text-xl font-bold">Our Mission</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                To make bottled-water quality available at every tap in the UAE — sustainably,
+                To make bottled-water quality available at every tap in the UAE, sustainably,
                 affordably, and with service that never makes you chase us.
               </p>
             </div>
@@ -116,7 +115,7 @@ function AboutPage() {
         <SectionHeading
           eyebrow="Why Trust Us"
           title="Certified, approved, accountable"
-          sub="Credentials you can verify — and a warranty you can actually use."
+          sub="Credentials you can verify, and a warranty you can actually use."
         />
         <div className="mx-auto mt-12 grid max-w-5xl gap-6 sm:grid-cols-2">
           {certs.map((c, i) => (
@@ -131,7 +130,7 @@ function AboutPage() {
         <Reveal className="mt-12 text-center">
           <Link
             to="/book"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-bold text-primary-foreground transition-all hover:shadow-[0_0_30px_oklch(0.6_0.115_218/40%)]"
+            className="inline-flex items-center gap-2 rounded-md bg-primary px-8 py-4 text-sm font-bold text-primary-foreground transition-all"
           >
             <Droplets className="h-4 w-4" /> Book Your Free Water Test
           </Link>

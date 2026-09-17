@@ -13,7 +13,7 @@ export const Route = createFileRoute("/blog/$slug")({
   component: BlogArticlePage,
   head: ({ loaderData }) => ({
     meta: [
-      { title: `${loaderData?.post.title ?? "Article"} — MENA AQUA Tru UAE` },
+      { title: `${loaderData?.post.title ?? "Article"}, MENA AQUA Tru UAE` },
       { name: "description", content: loaderData?.post.excerpt ?? "" },
       { property: "og:title", content: loaderData?.post.title ?? "" },
       { property: "og:description", content: loaderData?.post.excerpt ?? "" },
@@ -44,7 +44,6 @@ function BlogArticlePage() {
   return (
     <>
       <article className="relative overflow-hidden bg-underwater px-4 pb-20 pt-32 sm:px-6 lg:px-8">
-        <div className="pointer-events-none absolute -top-24 right-0 h-96 w-96 rounded-full bg-primary/15 blur-3xl animate-drift" />
         <div className="relative mx-auto max-w-3xl">
           <Link
             to="/blog"
