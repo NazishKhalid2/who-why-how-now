@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ShieldCheck,
-  Award,
   Wrench,
   Clock,
   Home,
@@ -10,12 +9,15 @@ import {
   Package,
   ClipboardCheck,
   ArrowRight,
-  BadgeCheck,
   Headset,
+  Droplets,
+  Filter,
+  FlaskConical,
+  Gauge,
 } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
-import { SectionHeading, CTABanner } from "@/components/site/Shared";
-import { images } from "@/data/site";
+import { Button } from "@/components/ui/button";
+import { images, products } from "@/data/site";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -33,6 +35,8 @@ export const Route = createFileRoute("/")({
         content:
           "Water purification systems, installation and maintenance across the UAE. Book a free consultation.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -40,10 +44,10 @@ export const Route = createFileRoute("/")({
 });
 
 const trustItems = [
-  { icon: Home, label: "Homes & businesses across the UAE" },
-  { icon: Wrench, label: "Installation, service & repairs" },
-  { icon: Package, label: "Genuine filters & spare parts" },
-  { icon: Clock, label: "Open 7 days, 8:00 AM to 9:00 PM" },
+  { icon: Droplets, title: "Water testing", label: "Test before recommendation" },
+  { icon: Filter, title: "Advanced filtration", label: "RO, softening and UV systems" },
+  { icon: Wrench, title: "Installation", label: "Fitted and commissioned by our team" },
+  { icon: Package, title: "Ongoing care", label: "Maintenance and genuine spare parts" },
 ];
 
 const categories = [
@@ -81,8 +85,8 @@ const steps = [
   },
   {
     icon: Wrench,
-    title: "Expert Installation",
-    desc: "Certified technicians install and commission your system, usually within one visit.",
+    title: "Installation",
+    desc: "Our team installs and commissions the selected system at your property.",
   },
   {
     icon: CalendarClock,
@@ -91,21 +95,21 @@ const steps = [
   },
   {
     icon: Headset,
-    title: "Lifetime Support",
+    title: "Ongoing Support",
     desc: "Phone and WhatsApp support 7 days a week, 8:00 AM to 9:00 PM.",
   },
 ];
 
 const features = [
   {
-    icon: BadgeCheck,
+    icon: FlaskConical,
     title: "One Accountable Team",
     desc: "The people who test your water are the people who install and service the system.",
   },
   {
-    icon: Clock,
-    title: "Open Every Day",
-    desc: "Appointments 7 days a week, from 8:00 AM to 9:00 PM, across the UAE.",
+    icon: Gauge,
+    title: "Test First",
+    desc: "We test your water before recommending filtration, softening or purification.",
   },
   {
     icon: ShieldCheck,
@@ -120,211 +124,257 @@ const features = [
 ];
 
 function HomePage() {
+  const featuredProducts = products.slice(0, 3);
+
   return (
-    <>
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-underwater pt-16">
-        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 pb-20 pt-14 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:pb-24 lg:pt-20">
-          <Reveal>
-            <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary">
-              Water Purification · UAE
-            </p>
-            <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
-              Clean, tested water for homes and businesses in the UAE
-            </h1>
-            <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">
-              We test your water, install the right filtration, softening or purification system,
-              and keep it serviced. Based in Al Muteena, Deira, Dubai.
-            </p>
-            <div className="mt-9 flex flex-wrap gap-4">
-              <Link
-                to="/book"
-                className="rounded-md bg-primary px-8 py-4 text-sm font-bold text-primary-foreground transition-all"
-              >
-                Book a Free Consultation
-              </Link>
-              <Link
-                to="/products"
-                className="glass inline-flex items-center gap-2 rounded-md px-8 py-4 text-sm font-bold text-foreground transition-colors hover:border-primary"
-              >
-                View Products <ArrowRight className="h-4 w-4" />
-              </Link>
+    <div className="home-editorial">
+      <section className="relative min-h-[760px] overflow-hidden bg-underwater pt-20 lg:min-h-[820px]">
+        <div aria-hidden className="home-water-word">
+          WATER
+        </div>
+        <div aria-hidden className="home-bubble home-bubble-one" />
+        <div aria-hidden className="home-bubble home-bubble-two" />
+
+        <div className="relative z-10 mx-auto grid min-h-[680px] max-w-7xl grid-cols-1 px-4 pb-44 pt-14 sm:px-6 lg:grid-cols-12 lg:px-8 lg:pb-52 lg:pt-16">
+          <div className="relative z-30 self-start lg:col-span-5">
+            <div className="mb-6 flex items-center gap-4">
+              <span className="h-px w-8 bg-primary" />
+              <p className="text-[0.68rem] font-bold uppercase tracking-[0.28em] text-primary">
+                Water purification / UAE
+              </p>
             </div>
-          </Reveal>
-          <Reveal delay={150}>
-            <div className="glass glow-hover overflow-hidden rounded-3xl">
+            <h1 className="max-w-xl font-display text-5xl font-semibold leading-[1.02] sm:text-6xl lg:text-7xl">
+              Pure water.
+              <span className="block font-light text-primary">Better living.</span>
+            </h1>
+            <p className="mt-7 max-w-md text-base leading-7 text-muted-foreground sm:text-lg">
+              We test your water, select the right filtration, softening or purification system,
+              install it and keep it serviced across the UAE.
+            </p>
+            <div className="mt-9 flex flex-wrap items-center gap-4">
+              <Button asChild size="lg" className="h-12 px-7 font-bold">
+                <Link to="/products">Explore Filters</Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="h-12 px-7 font-bold">
+                <Link to="/book">
+                  Find Your Filter <ArrowRight />
+                </Link>
+              </Button>
+            </div>
+          </div>
+
+          <div className="relative z-20 mt-14 min-h-[340px] lg:col-span-7 lg:mt-0 lg:min-h-[520px]">
+            <div className="home-product-frame absolute inset-x-0 top-0 mx-auto w-[min(100%,680px)] overflow-hidden border border-border bg-card p-2 shadow-[var(--shadow-soft)] sm:p-3 lg:-top-6 lg:right-0 lg:mr-0">
               <img
                 src={images.heroImg}
-                alt="MENA AQUA Tru reverse osmosis purification system"
+                alt="MENA AQUA Tru water softener, triple filtration and UV sterilizer system"
                 width={1200}
                 height={900}
-                className="h-auto w-full object-cover"
+                fetchPriority="high"
+                className="aspect-[4/3] w-full object-cover"
               />
+              <div className="flex items-end justify-between gap-4 px-3 pb-3 pt-4 sm:px-5">
+                <div>
+                  <p className="text-[0.62rem] font-bold uppercase tracking-[0.24em] text-primary">
+                    Complete water care
+                  </p>
+                  <p className="mt-1 text-sm font-semibold">Softening / Filtration / UV</p>
+                </div>
+                <span className="hidden text-xs text-muted-foreground sm:block">Al Muteena, Dubai</span>
+              </div>
             </div>
-          </Reveal>
+            <div className="home-tech-label absolute -bottom-5 left-0 z-30 hidden w-44 border border-border bg-background p-5 shadow-[var(--shadow-soft)] sm:block lg:left-4">
+              <span className="text-[0.62rem] font-bold uppercase tracking-[0.2em] text-primary">
+                Water first
+              </span>
+              <p className="mt-2 text-sm font-semibold leading-5">On-site testing before recommendation</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="home-curve absolute inset-x-0 bottom-0 z-20 bg-background px-4 pb-7 pt-16 sm:px-6 lg:px-8 lg:pb-9 lg:pt-20">
+          <div className="mx-auto grid max-w-7xl grid-cols-2 gap-x-5 gap-y-7 lg:grid-cols-4">
+            {trustItems.map((item) => (
+              <div key={item.title} className="flex items-start gap-3">
+                <item.icon className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                <div>
+                  <h2 className="text-sm font-bold">{item.title}</h2>
+                  <p className="mt-1 text-xs leading-5 text-muted-foreground">{item.label}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Trust bar */}
-      <section className="border-y border-input bg-background px-4 py-7 sm:px-6 lg:px-8">
-        <Reveal className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-10 gap-y-4">
-          {trustItems.map((t) => (
-            <div
-              key={t.label}
-              className="flex items-center gap-2.5 text-sm font-semibold text-muted-foreground"
-            >
-              <t.icon className="h-5 w-5 text-primary" />
-              {t.label}
+      <section className="px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-10 border-b border-border pb-12 lg:grid-cols-12 lg:items-end">
+            <div className="lg:col-span-8">
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-primary">
+                How we solve your problem
+              </p>
+              <h2 className="mt-4 max-w-3xl font-display text-4xl font-semibold leading-tight sm:text-5xl">
+                Find the filtration system that fits your water.
+              </h2>
             </div>
-          ))}
-        </Reveal>
+            <p className="max-w-md leading-7 text-muted-foreground lg:col-span-4 lg:justify-self-end">
+              From a dedicated drinking-water tap to whole-house softening, we start with the water
+              at your property and recommend from there.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-10 lg:grid-cols-12">
+            <Link
+              to="/products/$productId"
+              params={{ productId: featuredProducts[0].id }}
+              className="group relative overflow-hidden border border-border bg-deep-2 lg:col-span-7"
+            >
+              <img
+                src={images.heroImg}
+                alt="MENA AQUA Tru filtration system range"
+                width={1200}
+                height={900}
+                loading="lazy"
+                className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+              />
+              <div className="grid gap-3 border-t border-border bg-background p-6 sm:grid-cols-[1fr_auto] sm:items-end">
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Residential</p>
+                  <h3 className="mt-2 font-display text-2xl font-semibold">{featuredProducts[0].name}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">{featuredProducts[0].tagline}</p>
+                </div>
+                <span className="text-sm font-bold text-foreground">{featuredProducts[0].price}</span>
+              </div>
+            </Link>
+
+            <div className="lg:col-span-5">
+              {featuredProducts.slice(1).map((product, index) => (
+                <Link
+                  key={product.id}
+                  to="/products/$productId"
+                  params={{ productId: product.id }}
+                  className="group grid min-h-48 grid-cols-[auto_1fr] gap-5 border-b border-border py-8 first:pt-0"
+                >
+                  <span className="font-display text-4xl font-light text-primary/50">
+                    0{index + 2}
+                  </span>
+                  <span>
+                    <span className="text-xs font-bold uppercase tracking-[0.2em] text-primary">
+                      {product.category}
+                    </span>
+                    <span className="mt-2 block font-display text-2xl font-semibold">{product.name}</span>
+                    <span className="mt-3 block text-sm leading-6 text-muted-foreground">
+                      {product.tagline}
+                    </span>
+                    <span className="mt-5 inline-flex items-center gap-2 text-sm font-bold">
+                      {product.price} <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </span>
+                  </span>
+                </Link>
+              ))}
+              <Button asChild variant="outline" className="mt-8 h-11 px-6">
+                <Link to="/products">View all products</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
       </section>
 
-      {/* Who we are */}
-      <section className="px-4 py-24 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2">
-          <Reveal>
-            <div className="glass rounded-3xl p-8">
-              <h3 className="text-sm font-bold uppercase tracking-widest text-primary">
-                MENA AQUA Tru Water Solutions LLC
-              </h3>
-              <dl className="mt-6 space-y-5 text-sm">
+      <section className="bg-deep px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+        <div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-12">
+          <div className="lg:col-span-4">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-primary">Who we are</p>
+            <h2 className="mt-4 font-display text-4xl font-semibold leading-tight">
+              One water team, from test to service.
+            </h2>
+          </div>
+          <div className="lg:col-span-8">
+            <p className="max-w-3xl text-xl leading-9 text-foreground">
+              MENA AQUA Tru supplies, installs and services water filtration, softening and
+              purification systems for homes and businesses across the UAE.
+            </p>
+            <div className="mt-12 grid gap-8 border-t border-border pt-8 sm:grid-cols-2">
+              <dl className="space-y-6 text-sm">
                 <div>
-                  <dt className="font-semibold">Where we are</dt>
-                  <dd className="mt-1 text-muted-foreground">
-                    Al Muteena, Deira, Dubai, United Arab Emirates
-                  </dd>
+                  <dt className="font-bold">Based in Dubai</dt>
+                  <dd className="mt-1 text-muted-foreground">Al Muteena, Deira, Dubai, UAE</dd>
                 </div>
                 <div>
-                  <dt className="font-semibold">When we are open</dt>
-                  <dd className="mt-1 text-muted-foreground">
-                    7 days a week, 8:00 AM to 9:00 PM
-                  </dd>
-                </div>
-                <div>
-                  <dt className="font-semibold">What we do</dt>
-                  <dd className="mt-1 text-muted-foreground">
-                    Water testing, filtration, softening and purification systems, installation,
-                    maintenance and genuine spare parts.
-                  </dd>
-                </div>
-                <div>
-                  <dt className="font-semibold">How to reach us</dt>
-                  <dd className="mt-1 text-muted-foreground">
-                    Phone and WhatsApp 050-7183290, sales.aquatru@gmail.com
-                  </dd>
+                  <dt className="font-bold">Open every day</dt>
+                  <dd className="mt-1 text-muted-foreground">8:00 AM to 9:00 PM</dd>
                 </div>
               </dl>
-            </div>
-          </Reveal>
-          <Reveal delay={120}>
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-primary">Who We Are</p>
-            <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
-              Water specialists you can invite into your home
-            </h2>
-            <p className="mt-5 leading-relaxed text-muted-foreground">
-              MENA AQUA Tru supplies and services water filtration, softening and purification
-              systems for homes and businesses in the UAE. We test the water first, recommend a
-              system that fits it, install it, and look after it afterwards.
-            </p>
-            <ul className="mt-7 space-y-4">
-              {[
-                "Free on-site water testing before we recommend anything",
-                "Written quotations, so the price is agreed before work starts",
-                "One team for installation, servicing and spare parts",
-              ].map((line) => (
-                <li key={line} className="flex items-start gap-3 text-sm font-medium">
-                  <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                  {line}
-                </li>
-              ))}
-            </ul>
-            <Link
-              to="/about"
-              className="mt-8 inline-flex items-center gap-2 text-sm font-bold text-primary transition-transform hover:translate-x-1"
-            >
-              Our story <ArrowRight className="h-4 w-4" />
-            </Link>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* Products / how we solve problems */}
-      <section className="bg-deep-2/40 px-4 py-24 sm:px-6 lg:px-8">
-        <SectionHeading
-          eyebrow="How We Solve Your Problem"
-          title="One partner for every drop"
-          sub="From a single kitchen tap to a full commercial plant, systems and services engineered for UAE water conditions."
-        />
-        <div className="mx-auto mt-14 grid max-w-7xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {categories.map((c, i) => (
-            <Reveal key={c.title} delay={i * 90} className="h-full">
-              <Link
-                to={c.to}
-                className="glass glow-hover group flex h-full flex-col rounded-3xl p-7"
-              >
-                <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/15 text-primary">
-                  <c.icon className="h-6 w-6" />
-                </span>
-                <h3 className="mt-5 text-lg font-bold">{c.title}</h3>
-                <p className="mt-2.5 flex-1 text-sm leading-relaxed text-muted-foreground">
-                  {c.desc}
+              <div>
+                <p className="text-sm leading-7 text-muted-foreground">
+                  Water testing, written quotations, installation, scheduled maintenance and
+                  genuine spare parts are handled by one accountable team.
                 </p>
-                <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-primary">
-                  Learn more
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </span>
-              </Link>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
-      {/* Process */}
-      <section className="px-4 py-24 sm:px-6 lg:px-8">
-        <SectionHeading
-          eyebrow="The Next Step Is Easy"
-          title="From first call to pure water in days"
-          sub="A simple, transparent process, you always know what happens next."
-        />
-        <div className="mx-auto mt-14 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {steps.map((s, i) => (
-            <Reveal key={s.title} delay={i * 100} className="h-full">
-              <div className="glass relative h-full rounded-3xl p-7">
-                <span className="absolute right-6 top-5 font-display text-4xl font-extrabold text-primary/20">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/15 text-primary">
-                  <s.icon className="h-6 w-6" />
-                </span>
-                <h3 className="mt-5 font-bold">{s.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+                <Link to="/about" className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-primary">
+                  More about MENA AQUA Tru <ArrowRight className="h-4 w-4" />
+                </Link>
               </div>
-            </Reveal>
-          ))}
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Why trust us */}
-      <section className="bg-deep-2/40 px-4 py-24 sm:px-6 lg:px-8">
-        <SectionHeading eyebrow="Why Trust Us" title="Built on proof, not promises" />
-        <div className="mx-auto mt-14 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {features.map((f, i) => (
-            <Reveal key={f.title} delay={i * 90} className="h-full">
-              <div className="glass glow-hover h-full rounded-3xl p-7 text-center">
-                <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/15 text-primary">
-                  <f.icon className="h-6 w-6" />
-                </span>
-                <h3 className="mt-5 font-bold">{f.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{f.desc}</p>
-              </div>
-            </Reveal>
-          ))}
+      <section className="px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-16 lg:grid-cols-2">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-primary">Why trust us</p>
+              <h2 className="mt-4 max-w-lg font-display text-4xl font-semibold leading-tight">
+                Clear recommendations, written before work starts.
+              </h2>
+            </div>
+            <div className="grid gap-x-10 gap-y-9 sm:grid-cols-2">
+              {features.map((feature) => (
+                <div key={feature.title} className="border-t border-border pt-5">
+                  <feature.icon className="h-5 w-5 text-primary" />
+                  <h3 className="mt-4 font-bold">{feature.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-muted-foreground">{feature.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
-
-      <CTABanner />
-    </>
+      <section className="bg-foreground px-4 py-24 text-primary-foreground sm:px-6 lg:px-8 lg:py-32">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-10 lg:grid-cols-12 lg:items-end">
+            <div className="lg:col-span-7">
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-aqua">The next step</p>
+              <h2 className="mt-4 font-display text-4xl font-semibold leading-tight sm:text-5xl">
+                From a water test to the right system.
+              </h2>
+            </div>
+            <p className="max-w-md leading-7 text-primary-foreground/70 lg:col-span-5 lg:justify-self-end">
+              Book a free consultation. We will test the water at your property and explain the
+              available options before you decide.
+            </p>
+          </div>
+          <ol className="mt-16 grid gap-8 border-t border-primary-foreground/20 pt-10 md:grid-cols-4">
+            {steps.map((step, index) => (
+              <li key={step.title}>
+                <span className="text-xs font-bold text-aqua">0{index + 1}</span>
+                <step.icon className="mt-6 h-6 w-6 text-aqua" />
+                <h3 className="mt-5 font-bold">{step.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-primary-foreground/65">{step.desc}</p>
+              </li>
+            ))}
+          </ol>
+          <div className="mt-14 flex flex-wrap gap-4">
+            <Button asChild size="lg" className="h-12 bg-primary px-7 font-bold text-primary-foreground">
+              <Link to="/book">Book a Free Consultation</Link>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="h-12 border-primary-foreground/30 bg-transparent px-7 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
+              <a href="https://wa.me/971507183290" target="_blank" rel="noreferrer">WhatsApp Us</a>
+            </Button>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

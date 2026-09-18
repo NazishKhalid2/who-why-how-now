@@ -2,3 +2,4 @@
 - [ ] Remove prohibited styling, fake reviews, fake metrics, and unsupported copy
 - [ ] Confirm favicon, privacy policy, and terms pages
 - [ ] Keep launch blocked until custom domain and AI badge removal are confirmed
+- [x] Redesign only the homepage as a Coastal Aqua editorial product campaign
