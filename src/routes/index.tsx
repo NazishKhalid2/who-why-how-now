@@ -183,7 +183,7 @@ function HomePage() {
                 <span className="hidden text-xs text-muted-foreground sm:block">Al Muteena, Dubai</span>
               </div>
             </div>
-            <div className="home-tech-label absolute -bottom-5 left-0 z-30 hidden w-44 border border-border bg-background p-5 shadow-[var(--shadow-soft)] sm:block lg:left-4">
+            <div className="home-tech-label absolute -left-4 top-1/2 z-30 hidden w-44 -translate-y-1/2 border border-border bg-background p-5 shadow-[var(--shadow-soft)] sm:block lg:-left-10">
               <span className="text-[0.62rem] font-bold uppercase tracking-[0.2em] text-primary">
                 Water first
               </span>
