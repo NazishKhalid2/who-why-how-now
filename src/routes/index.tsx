@@ -227,7 +227,7 @@ function HomePage() {
           <div className="mt-14 grid gap-10 lg:grid-cols-12">
             <Link
               to="/products/$productId"
-              params={{ productId: featuredProducts[0].id }}
+              params={{ productId: featuredProducts[0]!.id }}
               className="group relative overflow-hidden border border-border bg-deep-2 lg:col-span-7"
             >
               <img
@@ -241,10 +241,10 @@ function HomePage() {
               <div className="grid gap-3 border-t border-border bg-background p-6 sm:grid-cols-[1fr_auto] sm:items-end">
                 <div>
                   <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Residential</p>
-                  <h3 className="mt-2 font-display text-2xl font-semibold">{featuredProducts[0].name}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{featuredProducts[0].tagline}</p>
+                  <h3 className="mt-2 font-display text-2xl font-semibold">{featuredProducts[0]!.name}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">{featuredProducts[0]!.tagline}</p>
                 </div>
-                <span className="text-sm font-bold text-foreground">{featuredProducts[0].price}</span>
+                <span className="text-sm font-bold text-foreground">{featuredProducts[0]!.price}</span>
               </div>
             </Link>
 
