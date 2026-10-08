@@ -14,6 +14,10 @@ import {
   Filter,
   FlaskConical,
   Gauge,
+  Warehouse,
+  PackageCheck,
+  Ship,
+  MapPin,
 } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 import { Button } from "@/components/ui/button";
@@ -121,6 +125,21 @@ const features = [
     title: "Direct Support",
     desc: "Call or WhatsApp 050-7183290 and speak to the team handling your system.",
   },
+];
+
+const warehouseFacts = [
+  { icon: Warehouse, label: "Warehouse", value: "United States" },
+  {
+    icon: PackageCheck,
+    label: "Stocked there",
+    value: "Filtration systems and spare parts",
+  },
+  {
+    icon: Ship,
+    label: "Delivery",
+    value: "Shipped to the UAE for installation and service",
+  },
+  { icon: MapPin, label: "Fitted from", value: "Al Muteena, Deira, Dubai" },
 ];
 
 function HomePage() {
@@ -314,6 +333,52 @@ function HomePage() {
                   More about MENA AQUA Tru <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-12 lg:grid-cols-12 lg:items-start lg:gap-16">
+            <div className="lg:col-span-5">
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-primary">
+                Where our stock comes from
+              </p>
+              <h2 className="mt-4 font-display text-4xl font-semibold leading-tight">
+                Supplied from our warehouse in the United States.
+              </h2>
+              <p className="mt-6 max-w-md text-lg leading-8 text-muted-foreground">
+                Our filtration systems and spare parts are stocked at our own warehouse in the
+                United States, then shipped to the UAE for installation and service. Ordering from
+                that stock means the components we fit are the components we sell, and replacements
+                are drawn from the same supply.
+              </p>
+              <Button asChild variant="outline" className="mt-8 h-11 px-6">
+                <Link to="/contact">Ask about availability</Link>
+              </Button>
+            </div>
+
+            <div className="w-full max-w-2xl border border-border bg-deep lg:col-span-7 lg:justify-self-end">
+              <div className="flex items-center justify-between gap-4 border-b border-border bg-deep-2 px-6 py-4 sm:px-7">
+                <span className="text-[0.62rem] font-bold uppercase tracking-[0.24em] text-primary">
+                  Supply at a glance
+                </span>
+                <span className="text-xs text-muted-foreground">United States to UAE</span>
+              </div>
+              <dl className="divide-y divide-border">
+                {warehouseFacts.map((fact) => (
+                  <div key={fact.label} className="flex items-start gap-5 px-6 py-6 sm:px-7">
+                    <fact.icon className="mt-1 h-5 w-5 shrink-0 text-primary" />
+                    <div className="grid gap-1 sm:grid-cols-[8rem_1fr] sm:items-baseline sm:gap-6">
+                      <dt className="text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground">
+                        {fact.label}
+                      </dt>
+                      <dd className="text-base font-semibold">{fact.value}</dd>
+                    </div>
+                  </div>
+                ))}
+              </dl>
             </div>
           </div>
         </div>
